@@ -14,6 +14,7 @@ public:
     Enemy(string _name, int _health, int _attack, int _defense, int _speed, int _experience);
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
+    bool isAlive(bool alive) override;
     int getExperience();
 };
 

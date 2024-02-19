@@ -11,12 +11,21 @@ Player::Player(string _name, int _health, int _attack, int _defense, int _speed)
 
 void Player::doAttack(Character *target) {
     target->takeDamage(attack);
+    target->isAlive(true);
 }
 
 void Player::takeDamage(int damage) {
     int trueDamage = damage - defense;
 
     health-= trueDamage;
+}
+
+bool Player::isAlive(bool alive) {
+    if (health <= 0) {
+        return false;
+    }
+    alive = true;
+    return alive;
 }
 
 void Player::levelUp() {

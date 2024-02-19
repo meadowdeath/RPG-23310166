@@ -20,6 +20,7 @@ public:
 
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
+    virtual bool isAlive(bool alive) = 0;
 
     string getName();
     int getHealth();
