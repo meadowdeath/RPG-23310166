@@ -1,17 +1,21 @@
 //
-// Created by Victor Navarro on 15/02/24.
+// Modified by meadowdeath on 28/02/24.
 //
 
 #include "Character.h"
-Character::Character(string _name, int _health, int _attack, int _defense, int _speed) {
-    name = _name;
+
+#include <utility>
+Character::Character(std::string _name, int _health, int _attack, int _defense, int _speed, CharacterState _currentState) {
+    name = std::move(_name);
     health = _health;
     attack = _attack;
     defense = _defense;
     speed = _speed;
+    currentState = _currentState;
+
 }
 
-string Character::getName() {
+std::string Character::getName() {
     return name;
 }
 
@@ -31,6 +35,6 @@ int Character::getSpeed() {
     return speed;
 }
 
-string Character::toString() {
-    return "Name: " + name + "\nHealth: " + to_string(health) + "\nAttack: " + to_string(attack) + "\nDefense: " + to_string(defense) + "\nSpeed: " + to_string(speed);
+std::string Character::toString() {
+    return "Name: " + name + "\nHealth: " + std::to_string(health) + "\nAttack: " + std::to_string(attack) + "\nDefense: " + std::to_string(defense) + "\nSpeed: " + std::to_string(speed);
 }

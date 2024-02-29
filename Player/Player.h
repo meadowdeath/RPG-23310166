@@ -1,5 +1,5 @@
 //
-// Created by Victor Navarro on 15/02/24.
+// Modified by meadowdeath on 28/02/24.
 //
 
 #ifndef RPG_PLAYER_H
@@ -14,14 +14,20 @@ private:
     int experience;
 
     void levelUp();
+
 public:
-    Player(string _name, int _health, int _attack, int _defense, int _speed);
+    // Constructor to initialize the player
+    Player(std::string _name, int _health, int _attack, int _defense, int _speed);
+
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
-    bool isAlive(bool alive) override;
 
     void gainExperience(int exp);
     //TODO: Implement use object
+
+    // Methods to change the player's state
+    void attacking();
+    void defending();
 };
 
 

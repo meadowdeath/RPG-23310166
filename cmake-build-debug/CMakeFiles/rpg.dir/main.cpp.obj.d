@@ -138,5 +138,7 @@ CMakeFiles/rpg.dir/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/bits/istream.tcc \
  E:\CETI\Segundo\ Semestre\POO\2P-RPG\2P-RPG\Player/Player.h \
  E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h \
+ C:/msys64/mingw64/include/c++/13.1.0/utility \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/stl_relops.h \
  E:\CETI\Segundo\ Semestre\POO\2P-RPG\2P-RPG\Enemy/Enemy.h \
  E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h

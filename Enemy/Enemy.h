@@ -1,5 +1,5 @@
 //
-// Created by Victor Navarro on 15/02/24.
+// Modified by meadowdeath on 28/02/24.
 //
 
 #ifndef RPG_ENEMY_H
@@ -11,11 +11,17 @@ class Enemy: public Character{
 private:
     int experience;
 public:
-    Enemy(string _name, int _health, int _attack, int _defense, int _speed, int _experience);
+    // Constructor to initialize the enemy.
+    Enemy(std::string _name, int _health, int _attack, int _defense, int _speed, int _experience);
+
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
-    bool isAlive(bool alive) override;
+
     int getExperience();
+
+    //Methods to change the enemy's state
+    void attacking();
+    void defending();
 };
 
 

@@ -86,6 +86,12 @@
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/Character/Character.h">
 			<Option target="rpg"/>
 		</Unit>
+		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/Combat/Combat.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/Combat/Combat.h">
+			<Option target="rpg"/>
+		</Unit>
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/Enemy/Enemy.cpp">
 			<Option target="rpg"/>
 		</Unit>
