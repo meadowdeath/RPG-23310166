@@ -141,4 +141,12 @@ CMakeFiles/rpg.dir/main.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/utility \
  C:/msys64/mingw64/include/c++/13.1.0/bits/stl_relops.h \
  E:\CETI\Segundo\ Semestre\POO\2P-RPG\2P-RPG\Enemy/Enemy.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h \
+ E:\CETI\Segundo\ Semestre\POO\2P-RPG\2P-RPG\Combat/Combat.h \
+ C:/msys64/mingw64/include/c++/13.1.0/vector \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/vector.tcc \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Player/Player.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Enemy/Enemy.h

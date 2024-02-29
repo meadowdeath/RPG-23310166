@@ -11,44 +11,44 @@ enum class CharacterState  {
     IDLE, // IDLE is the state when the character is not doing anything
     ATTACK,
     DEFEND
+    // TODO: Implement the DEAD state...
 };
 
 class Character {
 protected:
     std::string name;
+    int maxHealth;
     int health;
     int attack;
     int defense;
     int speed;
-    CharacterState currentState; // This is the state of the character
 
 public:
+    CharacterState currentState; // This is the state of the character
+
     // Constructor to initialize the character's attributes.
-    Character(std::string _name, int _health, int _attack, int _defense, int _speed, CharacterState _currentState);
+    Character(std::string _name, int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState);
 
     // Methods that will be implemented in the derived classes.
     virtual void doAttack(Character *target) = 0;
     virtual void takeDamage(int damage) = 0;
 
     // Method to change the state of the character.
-    void changeState(CharacterState newState) {
-        currentState = newState;
-    }
+    void changeState(CharacterState newState);
 
     // Method to get the state of the character.
-    CharacterState getState() {
-        return currentState;
-    }
+    CharacterState getState();
 
     // Getters for the character's attributes.
     std::string getName();
     int getHealth();
+    int getMaxHealth();
     int getAttack();
     int getDefense();
     int getSpeed();
 
     // Method to represent the character as a string.
-    std::string toString();
+    std::string showStats();
 };
 
 
