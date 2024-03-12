@@ -5,12 +5,13 @@
 
 namespace combat_utils {
     int getRolledAttack(int attack) {
-        int lowerLimit = (attack * 80)/100;
+        int lowerLimit = (attack * 80) / 100;
         return (rand() % (attack - lowerLimit + 1)) + lowerLimit;
     }
 
     int getRolledDefense(int defense) {
-        int lowerLimit = (defense * 40)/100;
+        // increase the defense by 20%
+        int lowerLimit = (defense * 20) / 100;
         return (rand() % (defense - lowerLimit + 1)) + lowerLimit;
     }
 }

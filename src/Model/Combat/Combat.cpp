@@ -125,6 +125,17 @@ void Combat::enemiesTurn() {
     // Enemies logic. First we check every enemy if they can attack the player
 
     for(auto& enemy : enemies){
+
+        // Generate a random number to determine probability of the enemy attacking or defending.
+        srand(time(nullptr));
+        int probability = rand() % 100 + 1;
+        bool defendDecision = false;
+        if(probability >= 30 && probability <= 70){
+            defendDecision = true;
+        } else {
+            defendDecision = false;
+        }
+
         // If the enemy is in the idle state, then the enemy will attack
         if(enemy->getState() == CharacterState::IDLE || enemy->getState() == CharacterState::ATTACK && enemy->getHealth() > 0){
             enemy->attacking(); // Change the state of the enemy to attack
@@ -139,8 +150,8 @@ void Combat::enemiesTurn() {
                 std::cout << "The player " << player->getName() << " is being attacked..." << std::endl;
                 std::cout << "^^^^^^^^^^^^^^^^^^^^^" << std::endl;
             }
-        // If enemy's health is > 15% of the max health, then the enemy will defend
-        } else if(enemy->getHealth() < 0.15 * enemy->getMaxHealth() && enemy->getHealth() > 0){
+        // If enemy's health is > 15% of the max health, the enemy has a 40% probability of do defend instead of attack.
+        } else if(enemy->getHealth() < 0.15 * enemy->getMaxHealth() && enemy->getHealth() > 0 && defendDecision){
             if(enemy->getState() != CharacterState::DEFEND){
             enemy->defending(); // Change the state of the enemy to defend
             enemy->doDefend();
@@ -196,6 +207,7 @@ void Combat::startCombat() {
         sortTurns(); // Order the turns of the participants
         // Put Enemies's health in a vector
         std::vector<int> enemiesHealth;
+        enemiesHealth.reserve(enemies.size());
         for(auto& enemy : enemies){
             enemiesHealth.push_back(enemy->getHealth());
         }

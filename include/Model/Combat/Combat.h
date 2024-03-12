@@ -26,9 +26,6 @@ private:
     // Method to give the enemies the option to attack or defend
     void enemiesTurn();
 
-    // Method to check if the enemies can attack the player
-    bool canAttackPlayer(Enemy* enemy);
-
     // Method to show the combat result
     void handleCombatResult();
 
