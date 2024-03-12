@@ -5,8 +5,8 @@
 #ifndef RPG_COMBAT_H
 #define RPG_COMBAT_H
 #include <vector>
-#include "../Player/Player.h"
-#include "../Enemy/Enemy.h"
+#include "../Character/Player/Player.h"
+#include "../Character/Enemy/Enemy.h"
 
 
 class Combat {

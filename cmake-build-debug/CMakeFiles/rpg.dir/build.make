@@ -82,78 +82,78 @@ CMakeFiles/rpg.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/main.cpp.s"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\main.cpp" -o CMakeFiles\rpg.dir\main.cpp.s
 
-CMakeFiles/rpg.dir/Character/Character.cpp.obj: CMakeFiles/rpg.dir/flags.make
-CMakeFiles/rpg.dir/Character/Character.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.cpp
-CMakeFiles/rpg.dir/Character/Character.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rpg.dir/Character/Character.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/Character/Character.cpp.obj -MF CMakeFiles\rpg.dir\Character\Character.cpp.obj.d -o CMakeFiles\rpg.dir\Character\Character.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Character\Character.cpp"
+CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj: CMakeFiles/rpg.dir/flags.make
+CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Character.cpp
+CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj -MF CMakeFiles\rpg.dir\src\Model\Character\Character.cpp.obj.d -o CMakeFiles\rpg.dir\src\Model\Character\Character.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Character.cpp"
 
-CMakeFiles/rpg.dir/Character/Character.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/Character/Character.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Character\Character.cpp" > CMakeFiles\rpg.dir\Character\Character.cpp.i
+CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Character.cpp" > CMakeFiles\rpg.dir\src\Model\Character\Character.cpp.i
 
-CMakeFiles/rpg.dir/Character/Character.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/Character/Character.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Character\Character.cpp" -o CMakeFiles\rpg.dir\Character\Character.cpp.s
+CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Character.cpp" -o CMakeFiles\rpg.dir\src\Model\Character\Character.cpp.s
 
-CMakeFiles/rpg.dir/Player/Player.cpp.obj: CMakeFiles/rpg.dir/flags.make
-CMakeFiles/rpg.dir/Player/Player.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Player/Player.cpp
-CMakeFiles/rpg.dir/Player/Player.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rpg.dir/Player/Player.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/Player/Player.cpp.obj -MF CMakeFiles\rpg.dir\Player\Player.cpp.obj.d -o CMakeFiles\rpg.dir\Player\Player.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Player\Player.cpp"
+CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj: CMakeFiles/rpg.dir/flags.make
+CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Player/Player.cpp
+CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj -MF CMakeFiles\rpg.dir\src\Model\Character\Player\Player.cpp.obj.d -o CMakeFiles\rpg.dir\src\Model\Character\Player\Player.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Player\Player.cpp"
 
-CMakeFiles/rpg.dir/Player/Player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/Player/Player.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Player\Player.cpp" > CMakeFiles\rpg.dir\Player\Player.cpp.i
+CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Player\Player.cpp" > CMakeFiles\rpg.dir\src\Model\Character\Player\Player.cpp.i
 
-CMakeFiles/rpg.dir/Player/Player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/Player/Player.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Player\Player.cpp" -o CMakeFiles\rpg.dir\Player\Player.cpp.s
+CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Player\Player.cpp" -o CMakeFiles\rpg.dir\src\Model\Character\Player\Player.cpp.s
 
-CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj: CMakeFiles/rpg.dir/flags.make
-CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Enemy/Enemy.cpp
-CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj -MF CMakeFiles\rpg.dir\Enemy\Enemy.cpp.obj.d -o CMakeFiles\rpg.dir\Enemy\Enemy.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Enemy\Enemy.cpp"
+CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj: CMakeFiles/rpg.dir/flags.make
+CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Enemy/Enemy.cpp
+CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj -MF CMakeFiles\rpg.dir\src\Model\Character\Enemy\Enemy.cpp.obj.d -o CMakeFiles\rpg.dir\src\Model\Character\Enemy\Enemy.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Enemy\Enemy.cpp"
 
-CMakeFiles/rpg.dir/Enemy/Enemy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/Enemy/Enemy.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Enemy\Enemy.cpp" > CMakeFiles\rpg.dir\Enemy\Enemy.cpp.i
+CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Enemy\Enemy.cpp" > CMakeFiles\rpg.dir\src\Model\Character\Enemy\Enemy.cpp.i
 
-CMakeFiles/rpg.dir/Enemy/Enemy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/Enemy/Enemy.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Enemy\Enemy.cpp" -o CMakeFiles\rpg.dir\Enemy\Enemy.cpp.s
+CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Character\Enemy\Enemy.cpp" -o CMakeFiles\rpg.dir\src\Model\Character\Enemy\Enemy.cpp.s
 
-CMakeFiles/rpg.dir/Combat/Combat.cpp.obj: CMakeFiles/rpg.dir/flags.make
-CMakeFiles/rpg.dir/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Combat/Combat.cpp
-CMakeFiles/rpg.dir/Combat/Combat.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rpg.dir/Combat/Combat.cpp.obj"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/Combat/Combat.cpp.obj -MF CMakeFiles\rpg.dir\Combat\Combat.cpp.obj.d -o CMakeFiles\rpg.dir\Combat\Combat.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Combat\Combat.cpp"
+CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: CMakeFiles/rpg.dir/flags.make
+CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Combat/Combat.cpp
+CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: CMakeFiles/rpg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj -MF CMakeFiles\rpg.dir\src\Model\Combat\Combat.cpp.obj.d -o CMakeFiles\rpg.dir\src\Model\Combat\Combat.cpp.obj -c "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Combat\Combat.cpp"
 
-CMakeFiles/rpg.dir/Combat/Combat.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/Combat/Combat.cpp.i"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Combat\Combat.cpp" > CMakeFiles\rpg.dir\Combat\Combat.cpp.i
+CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Combat\Combat.cpp" > CMakeFiles\rpg.dir\src\Model\Combat\Combat.cpp.i
 
-CMakeFiles/rpg.dir/Combat/Combat.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/Combat/Combat.cpp.s"
-	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\Combat\Combat.cpp" -o CMakeFiles\rpg.dir\Combat\Combat.cpp.s
+CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\CETI\Segundo Semestre\POO\2P-RPG\2P-RPG\src\Model\Combat\Combat.cpp" -o CMakeFiles\rpg.dir\src\Model\Combat\Combat.cpp.s
 
 # Object files for target rpg
 rpg_OBJECTS = \
 "CMakeFiles/rpg.dir/main.cpp.obj" \
-"CMakeFiles/rpg.dir/Character/Character.cpp.obj" \
-"CMakeFiles/rpg.dir/Player/Player.cpp.obj" \
-"CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj" \
-"CMakeFiles/rpg.dir/Combat/Combat.cpp.obj"
+"CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj" \
+"CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj" \
+"CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj" \
+"CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj"
 
 # External object files for target rpg
 rpg_EXTERNAL_OBJECTS =
 
 rpg.exe: CMakeFiles/rpg.dir/main.cpp.obj
-rpg.exe: CMakeFiles/rpg.dir/Character/Character.cpp.obj
-rpg.exe: CMakeFiles/rpg.dir/Player/Player.cpp.obj
-rpg.exe: CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj
-rpg.exe: CMakeFiles/rpg.dir/Combat/Combat.cpp.obj
+rpg.exe: CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj
+rpg.exe: CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj
+rpg.exe: CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj
+rpg.exe: CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj
 rpg.exe: CMakeFiles/rpg.dir/build.make
 rpg.exe: CMakeFiles/rpg.dir/linkLibs.rsp
 rpg.exe: CMakeFiles/rpg.dir/objects1.rsp

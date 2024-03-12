@@ -59,8 +59,8 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/bits/uses_allocator.h \
  C:/msys64/mingw64/include/c++/13.1.0/bits/uses_allocator_args.h \
  C:/msys64/mingw64/include/c++/13.1.0/tuple \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Player/Player.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Player/Player.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h \
  C:/msys64/mingw64/include/c++/13.1.0/string \
  C:/msys64/mingw64/include/c++/13.1.0/bits/stringfwd.h \
  C:/msys64/mingw64/include/c++/13.1.0/bits/char_traits.h \
@@ -104,8 +104,8 @@ CMakeFiles/rpg.dir/Combat/Combat.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/bits/basic_string.tcc \
  C:/msys64/mingw64/include/c++/13.1.0/utility \
  C:/msys64/mingw64/include/c++/13.1.0/bits/stl_relops.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Enemy/Enemy.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Enemy/Enemy.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h \
  C:/msys64/mingw64/include/c++/13.1.0/algorithm \
  C:/msys64/mingw64/include/c++/13.1.0/bits/stl_algo.h \
  C:/msys64/mingw64/include/c++/13.1.0/bits/algorithmfwd.h \

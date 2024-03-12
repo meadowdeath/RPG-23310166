@@ -2,7 +2,7 @@
 // Modified by meadowdeath on 28/02/24.
 //
 
-#include "Player.h"
+#include "../../../../include/Model/Character/Player/Player.h"
 
 #include <utility>
 #include <iostream>

@@ -2,7 +2,7 @@
 // Modified by meadowdeath on 28/02/24.
 //
 
-#include "Character.h"
+#include "../../../include/Model/Character/Character.h"
 
 #include <utility>
 Character::Character(std::string _name, int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState) {

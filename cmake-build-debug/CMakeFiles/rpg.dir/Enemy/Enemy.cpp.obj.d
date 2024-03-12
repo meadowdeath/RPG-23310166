@@ -1,7 +1,7 @@
 CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj: \
  E:\CETI\Segundo\ Semestre\POO\2P-RPG\2P-RPG\Enemy\Enemy.cpp \
  E:\CETI\Segundo\ Semestre\POO\2P-RPG\2P-RPG\Enemy\Enemy.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Character/Character.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h \
  C:/msys64/mingw64/include/c++/13.1.0/string \
  C:/msys64/mingw64/include/c++/13.1.0/bits/requires_hosted.h \
  C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++config.h \

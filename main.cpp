@@ -1,7 +1,7 @@
 #include <iostream>
-#include "Player/Player.h"
-#include "Enemy/Enemy.h"
-#include "Combat/Combat.h"
+#include "include/Model/Character/Player/Player.h"
+#include "include/Model/Character/Enemy/Enemy.h"
+#include "include/Model/Combat/Combat.h"
 
 int main() {
 

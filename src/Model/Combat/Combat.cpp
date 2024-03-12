@@ -2,7 +2,7 @@
 // Created by meadowdeath on 28/02/2024.
 //
 
-#include "Combat.h"
+#include "../../../include/Model/Combat/Combat.h"
 #include <algorithm>
 #include <iostream>
 

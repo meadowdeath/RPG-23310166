@@ -5,7 +5,7 @@
 #ifndef RPG_ENEMY_H
 #define RPG_ENEMY_H
 
-#include "../Character/Character.h"
+#include "../Character.h"
 
 class Enemy: public Character{
 private:

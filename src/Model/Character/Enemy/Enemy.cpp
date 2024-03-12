@@ -2,11 +2,11 @@
 // Modified by meadowdeath on 28/02/24.
 //
 
-#include "Enemy.h"
+#include "../../../../include/Model/Character/Enemy/Enemy.h"
 
 #include <utility>
 #include <iostream>
-#include "../Utils.h"
+#include "../../../../Utils.h"
 
 using namespace combat_utils;
 

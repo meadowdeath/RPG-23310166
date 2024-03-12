@@ -4,7 +4,7 @@
 
 #ifndef RPG_PLAYER_H
 #define RPG_PLAYER_H
-#include "../Character/Character.h"
+#include "../Character.h"
 
 class Player: public Character {
     //TODO: Implement Classes (Mage, Warrior, Rogue, etc..)

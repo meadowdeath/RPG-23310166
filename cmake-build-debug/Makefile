@@ -128,102 +128,6 @@ rpg/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/build
 .PHONY : rpg/fast
 
-Character/Character.obj: Character/Character.cpp.obj
-.PHONY : Character/Character.obj
-
-# target to build an object file
-Character/Character.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Character/Character.cpp.obj
-.PHONY : Character/Character.cpp.obj
-
-Character/Character.i: Character/Character.cpp.i
-.PHONY : Character/Character.i
-
-# target to preprocess a source file
-Character/Character.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Character/Character.cpp.i
-.PHONY : Character/Character.cpp.i
-
-Character/Character.s: Character/Character.cpp.s
-.PHONY : Character/Character.s
-
-# target to generate assembly for a file
-Character/Character.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Character/Character.cpp.s
-.PHONY : Character/Character.cpp.s
-
-Combat/Combat.obj: Combat/Combat.cpp.obj
-.PHONY : Combat/Combat.obj
-
-# target to build an object file
-Combat/Combat.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Combat/Combat.cpp.obj
-.PHONY : Combat/Combat.cpp.obj
-
-Combat/Combat.i: Combat/Combat.cpp.i
-.PHONY : Combat/Combat.i
-
-# target to preprocess a source file
-Combat/Combat.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Combat/Combat.cpp.i
-.PHONY : Combat/Combat.cpp.i
-
-Combat/Combat.s: Combat/Combat.cpp.s
-.PHONY : Combat/Combat.s
-
-# target to generate assembly for a file
-Combat/Combat.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Combat/Combat.cpp.s
-.PHONY : Combat/Combat.cpp.s
-
-Enemy/Enemy.obj: Enemy/Enemy.cpp.obj
-.PHONY : Enemy/Enemy.obj
-
-# target to build an object file
-Enemy/Enemy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Enemy/Enemy.cpp.obj
-.PHONY : Enemy/Enemy.cpp.obj
-
-Enemy/Enemy.i: Enemy/Enemy.cpp.i
-.PHONY : Enemy/Enemy.i
-
-# target to preprocess a source file
-Enemy/Enemy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Enemy/Enemy.cpp.i
-.PHONY : Enemy/Enemy.cpp.i
-
-Enemy/Enemy.s: Enemy/Enemy.cpp.s
-.PHONY : Enemy/Enemy.s
-
-# target to generate assembly for a file
-Enemy/Enemy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Enemy/Enemy.cpp.s
-.PHONY : Enemy/Enemy.cpp.s
-
-Player/Player.obj: Player/Player.cpp.obj
-.PHONY : Player/Player.obj
-
-# target to build an object file
-Player/Player.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Player/Player.cpp.obj
-.PHONY : Player/Player.cpp.obj
-
-Player/Player.i: Player/Player.cpp.i
-.PHONY : Player/Player.i
-
-# target to preprocess a source file
-Player/Player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Player/Player.cpp.i
-.PHONY : Player/Player.cpp.i
-
-Player/Player.s: Player/Player.cpp.s
-.PHONY : Player/Player.s
-
-# target to generate assembly for a file
-Player/Player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/Player/Player.cpp.s
-.PHONY : Player/Player.cpp.s
-
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -248,6 +152,102 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Model/Character/Character.obj: src/Model/Character/Character.cpp.obj
+.PHONY : src/Model/Character/Character.obj
+
+# target to build an object file
+src/Model/Character/Character.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj
+.PHONY : src/Model/Character/Character.cpp.obj
+
+src/Model/Character/Character.i: src/Model/Character/Character.cpp.i
+.PHONY : src/Model/Character/Character.i
+
+# target to preprocess a source file
+src/Model/Character/Character.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.i
+.PHONY : src/Model/Character/Character.cpp.i
+
+src/Model/Character/Character.s: src/Model/Character/Character.cpp.s
+.PHONY : src/Model/Character/Character.s
+
+# target to generate assembly for a file
+src/Model/Character/Character.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.s
+.PHONY : src/Model/Character/Character.cpp.s
+
+src/Model/Character/Enemy/Enemy.obj: src/Model/Character/Enemy/Enemy.cpp.obj
+.PHONY : src/Model/Character/Enemy/Enemy.obj
+
+# target to build an object file
+src/Model/Character/Enemy/Enemy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj
+.PHONY : src/Model/Character/Enemy/Enemy.cpp.obj
+
+src/Model/Character/Enemy/Enemy.i: src/Model/Character/Enemy/Enemy.cpp.i
+.PHONY : src/Model/Character/Enemy/Enemy.i
+
+# target to preprocess a source file
+src/Model/Character/Enemy/Enemy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.i
+.PHONY : src/Model/Character/Enemy/Enemy.cpp.i
+
+src/Model/Character/Enemy/Enemy.s: src/Model/Character/Enemy/Enemy.cpp.s
+.PHONY : src/Model/Character/Enemy/Enemy.s
+
+# target to generate assembly for a file
+src/Model/Character/Enemy/Enemy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.s
+.PHONY : src/Model/Character/Enemy/Enemy.cpp.s
+
+src/Model/Character/Player/Player.obj: src/Model/Character/Player/Player.cpp.obj
+.PHONY : src/Model/Character/Player/Player.obj
+
+# target to build an object file
+src/Model/Character/Player/Player.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj
+.PHONY : src/Model/Character/Player/Player.cpp.obj
+
+src/Model/Character/Player/Player.i: src/Model/Character/Player/Player.cpp.i
+.PHONY : src/Model/Character/Player/Player.i
+
+# target to preprocess a source file
+src/Model/Character/Player/Player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.i
+.PHONY : src/Model/Character/Player/Player.cpp.i
+
+src/Model/Character/Player/Player.s: src/Model/Character/Player/Player.cpp.s
+.PHONY : src/Model/Character/Player/Player.s
+
+# target to generate assembly for a file
+src/Model/Character/Player/Player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.s
+.PHONY : src/Model/Character/Player/Player.cpp.s
+
+src/Model/Combat/Combat.obj: src/Model/Combat/Combat.cpp.obj
+.PHONY : src/Model/Combat/Combat.obj
+
+# target to build an object file
+src/Model/Combat/Combat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj
+.PHONY : src/Model/Combat/Combat.cpp.obj
+
+src/Model/Combat/Combat.i: src/Model/Combat/Combat.cpp.i
+.PHONY : src/Model/Combat/Combat.i
+
+# target to preprocess a source file
+src/Model/Combat/Combat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.i
+.PHONY : src/Model/Combat/Combat.cpp.i
+
+src/Model/Combat/Combat.s: src/Model/Combat/Combat.cpp.s
+.PHONY : src/Model/Combat/Combat.s
+
+# target to generate assembly for a file
+src/Model/Combat/Combat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.s
+.PHONY : src/Model/Combat/Combat.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -257,21 +257,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... rpg
-	@echo ... Character/Character.obj
-	@echo ... Character/Character.i
-	@echo ... Character/Character.s
-	@echo ... Combat/Combat.obj
-	@echo ... Combat/Combat.i
-	@echo ... Combat/Combat.s
-	@echo ... Enemy/Enemy.obj
-	@echo ... Enemy/Enemy.i
-	@echo ... Enemy/Enemy.s
-	@echo ... Player/Player.obj
-	@echo ... Player/Player.i
-	@echo ... Player/Player.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Model/Character/Character.obj
+	@echo ... src/Model/Character/Character.i
+	@echo ... src/Model/Character/Character.s
+	@echo ... src/Model/Character/Enemy/Enemy.obj
+	@echo ... src/Model/Character/Enemy/Enemy.i
+	@echo ... src/Model/Character/Enemy/Enemy.s
+	@echo ... src/Model/Character/Player/Player.obj
+	@echo ... src/Model/Character/Player/Player.i
+	@echo ... src/Model/Character/Player/Player.s
+	@echo ... src/Model/Combat/Combat.obj
+	@echo ... src/Model/Combat/Combat.i
+	@echo ... src/Model/Combat/Combat.s
 .PHONY : help
 
 
