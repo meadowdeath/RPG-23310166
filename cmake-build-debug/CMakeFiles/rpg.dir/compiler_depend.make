@@ -213,6 +213,7 @@ CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj: E:/CETI/Segundo\ Semes
   C:/msys64/mingw64/include/c++/13.1.0/cstddef \
   C:/msys64/mingw64/include/c++/13.1.0/cstdio \
   C:/msys64/mingw64/include/c++/13.1.0/cstdlib \
+  C:/msys64/mingw64/include/c++/13.1.0/cstring \
   C:/msys64/mingw64/include/c++/13.1.0/cwchar \
   C:/msys64/mingw64/include/c++/13.1.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/13.1.0/debug/debug.h \
@@ -247,10 +248,12 @@ CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj: E:/CETI/Segundo\ Semes
   C:/msys64/mingw64/include/sdks/_mingw_ddk.h \
   C:/msys64/mingw64/include/sec_api/stdio_s.h \
   C:/msys64/mingw64/include/sec_api/stdlib_s.h \
+  C:/msys64/mingw64/include/sec_api/string_s.h \
   C:/msys64/mingw64/include/sec_api/wchar_s.h \
   C:/msys64/mingw64/include/stddef.h \
   C:/msys64/mingw64/include/stdio.h \
   C:/msys64/mingw64/include/stdlib.h \
+  C:/msys64/mingw64/include/string.h \
   C:/msys64/mingw64/include/swprintf.inl \
   C:/msys64/mingw64/include/vadefs.h \
   C:/msys64/mingw64/include/wchar.h \
@@ -1046,6 +1049,12 @@ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h:
 E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Player/Player.h:
 
 E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Character.cpp:
+
+C:/msys64/mingw64/include/c++/13.1.0/cstring:
+
+C:/msys64/mingw64/include/sec_api/string_s.h:
+
+C:/msys64/mingw64/include/string.h:
 
 E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Enemy/Enemy.cpp:
 

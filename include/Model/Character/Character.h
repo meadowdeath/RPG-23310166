@@ -16,7 +16,7 @@ enum class CharacterState  {
 
 class Character {
 protected:
-    std::string name;
+    char name[40];
     int maxHealth;
     int health;
     int attack;
@@ -27,7 +27,7 @@ public:
     CharacterState currentState; // This is the state of the character
 
     // Constructor to initialize the character's attributes.
-    Character(std::string _name, int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState);
+    Character(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState);
 
     // Methods that will be implemented in the derived classes.
     virtual void doAttack(Character *target) = 0;

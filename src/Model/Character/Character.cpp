@@ -5,8 +5,10 @@
 #include "../../../include/Model/Character/Character.h"
 
 #include <utility>
-Character::Character(std::string _name, int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState) {
-    name = std::move(_name);
+#include <cstring>
+
+Character::Character(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState) {
+    strcpy(name, _name);
     maxHealth = _maxHealth;
     health = _health;
     attack = _attack;
@@ -54,7 +56,11 @@ int Character::getSpeed() {
 }
 
 std::string Character::showStats() {
-    return "Name: " + name + "\n"
+
+    // Convert name to std::string
+    std::string nameString = name;
+
+    return "Name: " + nameString + "\n"
     "MaxHealth: " + std::to_string(maxHealth) +"\n"
     "Health: " + std::to_string(getHealth()) + "\n"
     "Attack: " + std::to_string(attack) + "\n"

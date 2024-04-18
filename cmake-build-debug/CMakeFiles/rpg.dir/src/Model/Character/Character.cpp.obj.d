@@ -97,4 +97,7 @@ CMakeFiles/rpg.dir/src/Model/Character/Character.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/bits/uses_allocator_args.h \
  C:/msys64/mingw64/include/c++/13.1.0/tuple \
  C:/msys64/mingw64/include/c++/13.1.0/utility \
- C:/msys64/mingw64/include/c++/13.1.0/bits/stl_relops.h
+ C:/msys64/mingw64/include/c++/13.1.0/bits/stl_relops.h \
+ C:/msys64/mingw64/include/c++/13.1.0/cstring \
+ C:/msys64/mingw64/include/string.h \
+ C:/msys64/mingw64/include/sec_api/string_s.h

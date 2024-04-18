@@ -10,8 +10,8 @@
 
 using namespace combat_utils;
 
-Enemy::Enemy(std::string _name, int _maxHealth, int _health, int _attack, int _defense, int _speed, int _experience) :
-Character(std::move(_name), _maxHealth, _health, _attack, _defense, _speed, CharacterState::IDLE) {
+Enemy::Enemy(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _experience) :
+Character(_name, _maxHealth, _health, _attack, _defense, _speed, CharacterState::IDLE) {
     experience = _experience;
 }
 

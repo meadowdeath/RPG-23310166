@@ -12,7 +12,7 @@ private:
     int experience;
 public:
     // Constructor to initialize the enemy.
-    Enemy(std::string _name, int maxHealth, int _health, int _attack, int _defense, int _speed, int _experience);
+    Enemy(char _name[40], int maxHealth, int _health, int _attack, int _defense, int _speed, int _experience);
 
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;

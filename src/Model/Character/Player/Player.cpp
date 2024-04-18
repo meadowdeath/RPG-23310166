@@ -7,8 +7,8 @@
 #include <utility>
 #include <iostream>
 
-Player::Player(std::string _name, int _maxHealth, int _health, int _attack, int _defense, int _speed) :
-Character(std::move(_name), _maxHealth, _health, _attack, _defense, _speed, CharacterState::IDLE) {
+Player::Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed) :
+Character(_name, _maxHealth, _health, _attack, _defense, _speed, CharacterState::IDLE) {
     level = 1;
     experience = 0;
 }
