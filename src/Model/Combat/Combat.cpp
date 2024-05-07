@@ -27,38 +27,75 @@ void Combat::showParticipantsState() {
 }*/
 
 void Combat::showParticipantsState() {
+
+    // Stats table Begins...
+
     std::string title = "'Press the number that indicates the action you want to perform.'";
     std::string question = "Start Encounter '1'?";
     std::string option1 = "1. Yes";
     std::string option2 = "2. No";
 
-    int maxWidth = static_cast<int>(std::max({title.length(), question.length(), option1.length(), option2.length()}) + 6);
+    int statsMaxWidth = static_cast<int>(std::max({title.length(), question.length(), option1.length(), option2.length()}) + 6);
 
-    tables_utils::printLine(maxWidth);
-    tables_utils::printCentered(title, maxWidth);
-    tables_utils::printLine(maxWidth);
+    printLine(statsMaxWidth);
+    printCentered(title, statsMaxWidth);
+    printLine(statsMaxWidth);
 
     std::string playerName = this->player->getName();
 
-    tables_utils::printCentered(playerName, maxWidth);
-    tables_utils::printLine(maxWidth);
-    printCharacterStats(player, maxWidth);
+    printCentered(playerName, statsMaxWidth);
+    printLine(statsMaxWidth);
+    printCharacterStats(player, statsMaxWidth);
 
-    //std::cout << "|                      " << std::setw(maxWidth - 28) << std::left << "Match of Golden Land" << "|" << std::endl;
-    //tables_utils::printLine(maxWidth);
     for (auto& enemy : enemies) {
         std::string enemyName = enemy->getName();
-        tables_utils::printCentered(enemyName, maxWidth);
-        tables_utils::printLine(maxWidth);
-        printCharacterStats(enemy, maxWidth);
+        printCentered(enemyName, statsMaxWidth);
+        printLine(statsMaxWidth);
+        printCharacterStats(enemy, statsMaxWidth);
         enemyName.clear();
     }
 
 
-    tables_utils::printCentered(question, maxWidth);
-    tables_utils::printLine(maxWidth);
-    std::cout << "| " << std::setw(maxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(maxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
-    tables_utils::printLine(maxWidth);
+    printCentered(question, statsMaxWidth);
+    printLine(statsMaxWidth);
+    std::cout << "| " << std::setw(statsMaxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(statsMaxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
+    printLine(statsMaxWidth);
+    std::cout << "" << std::endl;
+
+    // Stats Table Ends...
+}
+
+void Combat::showParticipantsStateDuringCombat() {
+
+    // Stats During Combat table Begins...
+
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string result = "The current state of the participants during combat is:";
+
+    int statsMaxWidth = static_cast<int>(std::max({title.length(), result.length()}) + 6);
+
+    printLine(statsMaxWidth);
+    printCentered(title, statsMaxWidth);
+    printLine(statsMaxWidth);
+    printCentered(result, statsMaxWidth);
+    printLine(statsMaxWidth);
+
+    std::string playerName = this->player->getName();
+
+    printCentered(playerName, statsMaxWidth);
+    printLine(statsMaxWidth);
+    printCharacterStats(player, statsMaxWidth);
+
+    for (auto& enemy : enemies) {
+        std::string enemyName = enemy->getName();
+        printCentered(enemyName, statsMaxWidth);
+        printLine(statsMaxWidth);
+        printCharacterStats(enemy, statsMaxWidth);
+        enemyName.clear();
+    }
+    std::cout << "" << std::endl;
+
+    // Stats During Combat Table Ends...
 }
 
 void Combat::printCharacterStats(Character* character, int maxWidth) {
@@ -70,7 +107,7 @@ void Combat::printCharacterStats(Character* character, int maxWidth) {
               << std::setw(10) << std::left << character->getDefense() << "| "
               << std::setw(8) << std::left << character->getSpeed() << "| "
               << std::setw(9) << std::left << "?" << " |" << std::endl;
-    tables_utils::printLine(maxWidth);
+    printLine(maxWidth);
 }
 
 
@@ -159,13 +196,22 @@ void Combat::sortTurns() {
 }
 
 void Combat::playerTurn() {
-    int playerOption;
 
-    std::cout << "Player's turn" << std::endl;
-    std::cout << "1. Attack" << std::endl;
-    std::cout << "2. Defend" << std::endl;
+    int playerOption;
+    std::string turn = "Player's turn";
+    std::string optionAttack = "1. Attack";
+    std::string optionDefend = "2. Defend";
+    int encounterTableMaxWidth = 71;
+
+    printCentered(turn, encounterTableMaxWidth);
+    printLine(encounterTableMaxWidth);
+    std::cout << "| " << std::setw(encounterTableMaxWidth / 2 - 2) << std::left << optionAttack << " | " << std::setw(encounterTableMaxWidth / 2 - 1) << std::left << optionDefend << " |" << std::endl;
+    printLine(encounterTableMaxWidth);
+    std::cout << "" << std::endl;
+
     std::cout << "Select an option: ";
     std::cin >> playerOption;
+    std::cout << "" << std::endl;
 
     while(playerOption != 1 && playerOption != 2){
         std::cout << "Invalid option, please select a valid option: ";
@@ -178,14 +224,26 @@ void Combat::playerTurn() {
         }
         // The player decides what enemy to attack
         int enemyOption;
-        std::cout << "Select the enemy to attack: " << std::endl;
-        // If an ememy is dead, then the player can't attack it, so we remove it from the list
+        std::string title = "'Press the number that indicates the action you want to perform.'";
+        std::string decision = "Select the enemy to attack:";
+
+        printLine(encounterTableMaxWidth);
+        printCentered(title, encounterTableMaxWidth);
+        printLine(encounterTableMaxWidth);
+        printCentered(decision, encounterTableMaxWidth);
+        printLine(encounterTableMaxWidth);
+
+        // If an enemy is dead, then the player can't attack it, so we remove it from the list
         for (int i = 0; i < enemies.size(); i++) {
             if(enemies[i]->getHealth() <= 0){
                 enemies.erase(enemies.begin() + i);
             }
-            std::cout << i+1 << ". " << enemies[i]->getName() << std::endl;
+            std::string enemyName = std::to_string(i+1) + ". " + enemies[i]->getName();
+            printCentered(enemyName, encounterTableMaxWidth);
+            printLine(encounterTableMaxWidth);
+            enemyName.clear();
         }
+        std::cout << "" << std::endl;
         std::cout << "Select an option: ";
         std::cin >> enemyOption;
         while(enemyOption < 1 || enemyOption > enemies.size()){
@@ -228,7 +286,7 @@ void Combat::playerTurn() {
         }
     }
 
-    showParticipantsState(); // Show the current state of the participants
+    
 }
 
 void Combat::enemiesTurn() {
@@ -276,7 +334,7 @@ void Combat::enemiesTurn() {
         }
     }
 
-    showParticipantsState(); // Show the current state of the participants
+    showParticipantsStateDuringCombat(); // Show the current state of the participants during combat
 }
 
 void Combat::handleCombatResult() {
@@ -352,7 +410,6 @@ void Combat::startCombat() {
             if (playerDecision == 1){
                 std::cout << "" << std::endl;
                 showParticipantsState(); // Show the current state of the participants
-                std::cout << "" << std::endl;
                 playerDecision = 0;
                 std::cout << "Select an option: ";
                 std::cin >> playerDecision;
@@ -385,13 +442,21 @@ void Combat::startCombat() {
         while(player->getHealth() > 0 || std::any_of(enemiesHealth.begin(), enemiesHealth.end(), [](int i){return i > 0;})){
             encounterCount++;
 
-            std::cout << "" << std::endl;
-            std::cout <<"%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
-            std::cout << "Encounter " << encounterCount << std::endl;
-            std::cout <<"%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
+            std::string action = "'Press the number that indicates the action you want to perform.'";
+            std::string encounter = "Encounter " + std::to_string(encounterCount);
+
+            int encounterTableMaxWidth = static_cast<int>(std::max({title.length(), encounter.length()}) + 6);
+
+            printLine(encounterTableMaxWidth);
+            printCentered(action, encounterTableMaxWidth);
+            printLine(encounterTableMaxWidth);
+            printCentered(encounter, encounterTableMaxWidth);
+            printLine(encounterTableMaxWidth);
             playerTurn();
+            std::cout << "" << std::endl;
             enemiesTurn();
             handleCombatResult(); // Show the combat result
+            std::cout << "" << std::endl;
         }
     } else {
         std::cout << "" << std::endl;

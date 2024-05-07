@@ -16,6 +16,7 @@ private:
 
     // Method to show the current state of the participants
     void showParticipantsState();
+    void showParticipantsStateDuringCombat();
 
     // Method to print the character stats
     static void printCharacterStats(Character* character, int width);
