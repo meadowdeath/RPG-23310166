@@ -3,11 +3,16 @@
 //
 
 #include "../../../include/Model/Combat/Combat.h"
+#include "../../../Tables.h"
 #include <algorithm>
 #include <iostream>
+#include <iomanip>
+
+using namespace tables_utils;
 
 Combat::Combat(Player* _player, const std::vector<Enemy*>& _enemies) : player(_player), enemies(_enemies) {}
 
+/*
 void Combat::showParticipantsState() {
     // Show the current state of the participants
     std::cout << "The current state of the participants is: " << std::endl;
@@ -19,9 +24,57 @@ void Combat::showParticipantsState() {
         std::cout << enemy->showStats() << std::endl;
         std::cout << "+-------------------+" << std::endl;
     }
+}*/
+
+void Combat::showParticipantsState() {
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string question = "Start Encounter '1'?";
+    std::string option1 = "1. Yes";
+    std::string option2 = "2. No";
+
+    int maxWidth = static_cast<int>(std::max({title.length(), question.length(), option1.length(), option2.length()}) + 6);
+
+    tables_utils::printLine(maxWidth);
+    tables_utils::printCentered(title, maxWidth);
+    tables_utils::printLine(maxWidth);
+
+    std::string playerName = this->player->getName();
+
+    tables_utils::printCentered(playerName, maxWidth);
+    tables_utils::printLine(maxWidth);
+    printCharacterStats(player, maxWidth);
+
+    //std::cout << "|                      " << std::setw(maxWidth - 28) << std::left << "Match of Golden Land" << "|" << std::endl;
+    //tables_utils::printLine(maxWidth);
+    for (auto& enemy : enemies) {
+        std::string enemyName = enemy->getName();
+        tables_utils::printCentered(enemyName, maxWidth);
+        tables_utils::printLine(maxWidth);
+        printCharacterStats(enemy, maxWidth);
+        enemyName.clear();
+    }
+
+
+    tables_utils::printCentered(question, maxWidth);
+    tables_utils::printLine(maxWidth);
+    std::cout << "| " << std::setw(maxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(maxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
+    tables_utils::printLine(maxWidth);
 }
 
-void Combat::sortTurns() {
+void Combat::printCharacterStats(Character* character, int maxWidth) {
+    std::cout << "|   Max Health   |  Health  |  Attack  |  Defense  |  Speed  |   Level   |" << std::endl;
+    tables_utils::printLine(maxWidth);
+    std::cout << "|   " << std::setw(13) << std::left << character->getMaxHealth() << "| "
+              << std::setw(9) << std::left << character->getHealth() << "| "
+              << std::setw(9) << std::left << character->getAttack() << "| "
+              << std::setw(10) << std::left << character->getDefense() << "| "
+              << std::setw(8) << std::left << character->getSpeed() << "| "
+              << std::setw(9) << std::left << "?" << " |" << std::endl;
+    tables_utils::printLine(maxWidth);
+}
+
+
+/*void Combat::sortTurns2() {
     // Order the turns of the participants
     std::vector<Character*> combatants;
     int combatParticipants = 0;
@@ -46,6 +99,63 @@ void Combat::sortTurns() {
 
     showParticipantsState(); // Show the current state of the participants
 
+}
+*/
+
+void Combat::sortTurns() {
+
+    // Order table Begins...
+
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string decision = "You have chosen to fight!";
+    std::string order = "The order of the turns of the combat based in 'speed' is:";
+    std::string question = "Do you want to check the current state of the participants?";
+    std::string option1 = "1. Yes.";
+    std::string option2 = "2. No.";
+
+    int orderTableMaxWidth = static_cast<int>(std::max({title.length(), decision.length(), order.length(), question.length(), option1.length(), option2.length()}) + 6);
+
+    printLine(orderTableMaxWidth);
+    printCentered(title, orderTableMaxWidth);
+    printLine(orderTableMaxWidth);
+    printCentered(decision, orderTableMaxWidth);
+    printLine(orderTableMaxWidth);
+    printCentered(order, orderTableMaxWidth);
+    printLine(orderTableMaxWidth);
+    int threeColumnWidth = (orderTableMaxWidth) / 3;
+    std::cout << "| " << std::setw(threeColumnWidth - 10) << std::left <<"Position" << "| " << std::setw(threeColumnWidth + 8) << std::left << "Name" << "| " << std::setw(threeColumnWidth) << std::left << "Character" << "|" << std::endl;
+    tables_utils::printLine(orderTableMaxWidth);
+
+    // Order the turns of the participants
+    std::vector<Character*> combatants;
+    int combatParticipants = 0;
+    combatants.push_back(player);
+    for (auto& enemy : enemies) {
+        combatants.push_back(enemy);
+    }
+    std::sort(combatants.begin(), combatants.end(), [](Character* a, Character* b) {
+        return a->getSpeed() > b->getSpeed();
+    });
+
+    for (auto& combatant : combatants) {
+        combatParticipants++;
+        std::cout << "| " << std::setw(threeColumnWidth - 10) << std::left << combatParticipants << "| " << std::setw(threeColumnWidth + 8) << std::left << combatant->getName() << "| " << std::setw(threeColumnWidth) << std::left;
+        if(combatant->getName() == player->getName()){
+            std::cout << "(Player) ";
+        } else {
+            std::cout << "(Enemy)  ";
+        }
+        std::cout << "|" << std::endl;
+        printLine(orderTableMaxWidth);
+    }
+
+    printCentered(question, orderTableMaxWidth);
+    printLine(orderTableMaxWidth);
+    std::cout << "| " << std::setw(orderTableMaxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(orderTableMaxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
+    printLine(orderTableMaxWidth);
+    std::cout << "" << std::endl;
+
+    // Order Table Ends...
 }
 
 void Combat::playerTurn() {
@@ -190,9 +300,28 @@ void Combat::handleCombatResult() {
 void Combat::startCombat() {
 
     int playerOption;
-    std::cout << "You have found some enemies, wanna fight?" << std::endl;
-    std::cout << "1. Yes." << std::endl;
-    std::cout << "2. No." << std::endl;
+
+    // Welcome table Begins...
+
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string question = "You have found some enemies, wanna fight?";
+    std::string option1 = "1. Yes.";
+    std::string option2 = "2. No.";
+
+    int maxWidth = static_cast<int>(std::max({title.length(), question.length(), option1.length(), option2.length()}) + 6);
+
+    printLine(maxWidth);
+    printCentered(title, maxWidth);
+    printLine(maxWidth);
+    printCentered(question, maxWidth);
+    printLine(maxWidth);
+    std::cout << "| " << std::setw(maxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(maxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
+    printLine(maxWidth);
+    std::cout << "" << std::endl;
+
+    // Welcome Table Ends...
+
+
     std::cout << "Select an option: ";
     std::cin >> playerOption;
 
@@ -202,11 +331,52 @@ void Combat::startCombat() {
     }
 
     if(playerOption == 1){
-        int encounterCount = 0;
-        std::cout << "You have chosen to fight!" << std::endl;
-        sortTurns(); // Order the turns of the participants
+
+        int playerDecision = 0;
+        do {
+            clearConsole();
+
+            std::cout << "" << std::endl;
+            sortTurns(); // Order the turns of the participants
+
+            std::cout << "Select an option: ";
+            std::cin >> playerDecision;
+
+            while(playerDecision != 1 && playerDecision != 2){
+                std::cout << "Invalid option, please select a valid option: ";
+                std::cin >> playerDecision;
+            }
+
+            clearConsole();
+
+            if (playerDecision == 1){
+                std::cout << "" << std::endl;
+                showParticipantsState(); // Show the current state of the participants
+                std::cout << "" << std::endl;
+                playerDecision = 0;
+                std::cout << "Select an option: ";
+                std::cin >> playerDecision;
+
+                while(playerDecision != 1 && playerDecision != 2){
+                    std::cout << "Invalid option, please select a valid option: ";
+                    std::cin >> playerDecision;
+                }
+
+                if(playerDecision == 1){
+                    clearConsole();
+                    break;
+                }
+
+                clearConsole();
+            } else {
+                break;
+            }
+
+        } while (playerOption == 1);
+
         // Put Enemies's health in a vector
         std::vector<int> enemiesHealth;
+        int encounterCount = 0;
         enemiesHealth.reserve(enemies.size());
         for(auto& enemy : enemies){
             enemiesHealth.push_back(enemy->getHealth());
@@ -215,6 +385,7 @@ void Combat::startCombat() {
         while(player->getHealth() > 0 || std::any_of(enemiesHealth.begin(), enemiesHealth.end(), [](int i){return i > 0;})){
             encounterCount++;
 
+            std::cout << "" << std::endl;
             std::cout <<"%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
             std::cout << "Encounter " << encounterCount << std::endl;
             std::cout <<"%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
@@ -223,6 +394,7 @@ void Combat::startCombat() {
             handleCombatResult(); // Show the combat result
         }
     } else {
+        std::cout << "" << std::endl;
         std::cout << "You have chosen to run away" << std::endl;
         // Exit the program
         exit(0);

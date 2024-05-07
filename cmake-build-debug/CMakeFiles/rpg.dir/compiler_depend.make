@@ -579,6 +579,7 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/include/c++/13.1.0/bits/basic_string.tcc \
   C:/msys64/mingw64/include/c++/13.1.0/bits/char_traits.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/charconv.h \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/codecvt.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/concept_check.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/cpp_type_traits.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/cxxabi_forced.h \
@@ -594,8 +595,11 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/include/c++/13.1.0/bits/istream.tcc \
   C:/msys64/mingw64/include/c++/13.1.0/bits/locale_classes.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/locale_classes.tcc \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_conv.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets.tcc \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.h \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.tcc \
   C:/msys64/mingw64/include/c++/13.1.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/memory_resource.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/memoryfwd.h \
@@ -607,9 +611,11 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/include/c++/13.1.0/bits/postypes.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/predefined_ops.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/ptr_traits.h \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/quoted_string.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/range_access.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/refwrap.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/requires_hosted.h \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc \
   C:/msys64/mingw64/include/c++/13.1.0/bits/std_abs.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/stl_algo.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/stl_algobase.h \
@@ -640,6 +646,7 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/include/c++/13.1.0/cstddef \
   C:/msys64/mingw64/include/c++/13.1.0/cstdio \
   C:/msys64/mingw64/include/c++/13.1.0/cstdlib \
+  C:/msys64/mingw64/include/c++/13.1.0/ctime \
   C:/msys64/mingw64/include/c++/13.1.0/cwchar \
   C:/msys64/mingw64/include/c++/13.1.0/cwctype \
   C:/msys64/mingw64/include/c++/13.1.0/debug/assertions.h \
@@ -651,15 +658,18 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/include/c++/13.1.0/ext/string_conversions.h \
   C:/msys64/mingw64/include/c++/13.1.0/ext/type_traits.h \
   C:/msys64/mingw64/include/c++/13.1.0/initializer_list \
+  C:/msys64/mingw64/include/c++/13.1.0/iomanip \
   C:/msys64/mingw64/include/c++/13.1.0/ios \
   C:/msys64/mingw64/include/c++/13.1.0/iosfwd \
   C:/msys64/mingw64/include/c++/13.1.0/iostream \
   C:/msys64/mingw64/include/c++/13.1.0/istream \
+  C:/msys64/mingw64/include/c++/13.1.0/locale \
   C:/msys64/mingw64/include/c++/13.1.0/new \
   C:/msys64/mingw64/include/c++/13.1.0/ostream \
   C:/msys64/mingw64/include/c++/13.1.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/13.1.0/pstl/glue_algorithm_defs.h \
   C:/msys64/mingw64/include/c++/13.1.0/pstl/pstl_config.h \
+  C:/msys64/mingw64/include/c++/13.1.0/sstream \
   C:/msys64/mingw64/include/c++/13.1.0/stdexcept \
   C:/msys64/mingw64/include/c++/13.1.0/stdlib.h \
   C:/msys64/mingw64/include/c++/13.1.0/streambuf \
@@ -681,7 +691,9 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/gthr.h \
+  C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/os_defines.h \
+  C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/time_members.h \
   C:/msys64/mingw64/include/corecrt.h \
   C:/msys64/mingw64/include/corecrt_startup.h \
   C:/msys64/mingw64/include/corecrt_stdio_config.h \
@@ -718,6 +730,7 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: E:/CETI/Segundo\ Semestre/PO
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mm_malloc.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/syslimits.h \
+  E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Tables.h \
   E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h \
   E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Enemy/Enemy.h \
   E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Player/Player.h \
@@ -821,6 +834,8 @@ C:/msys64/mingw64/include/c++/13.1.0/bits/stl_heap.h:
 C:/msys64/mingw64/include/c++/13.1.0/bits/std_abs.h:
 
 C:/msys64/mingw64/include/c++/13.1.0/bits/exception_defines.h:
+
+C:/msys64/mingw64/include/c++/13.1.0/bits/codecvt.h:
 
 C:/msys64/mingw64/include/c++/13.1.0/bits/exception_ptr.h:
 
@@ -1008,6 +1023,8 @@ C:/msys64/mingw64/include/pthread_signal.h:
 
 C:/msys64/mingw64/include/pthread_time.h:
 
+C:/msys64/mingw64/include/c++/13.1.0/ctime:
+
 C:/msys64/mingw64/include/pthread_unistd.h:
 
 C:/msys64/mingw64/include/sdks/_mingw_ddk.h:
@@ -1060,6 +1077,28 @@ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Enemy/Enemy.cpp:
 
 E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Combat/Combat.cpp:
 
+C:/msys64/mingw64/include/c++/13.1.0/bits/locale_conv.h:
+
+C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.h:
+
+C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.tcc:
+
+C:/msys64/mingw64/include/c++/13.1.0/bits/quoted_string.h:
+
+C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc:
+
 C:/msys64/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h:
 
 C:/msys64/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h:
+
+C:/msys64/mingw64/include/c++/13.1.0/iomanip:
+
+C:/msys64/mingw64/include/c++/13.1.0/locale:
+
+C:/msys64/mingw64/include/c++/13.1.0/sstream:
+
+C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/messages_members.h:
+
+C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/time_members.h:
+
+E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Tables.h:

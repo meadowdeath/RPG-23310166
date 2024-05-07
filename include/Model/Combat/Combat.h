@@ -17,6 +17,9 @@ private:
     // Method to show the current state of the participants
     void showParticipantsState();
 
+    // Method to print the character stats
+    static void printCharacterStats(Character* character, int width);
+
     // Method to sort the turns of the participants
     void sortTurns();
 

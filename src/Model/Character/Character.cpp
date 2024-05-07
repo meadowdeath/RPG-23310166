@@ -55,15 +55,16 @@ int Character::getSpeed() {
     return speed;
 }
 
+
 std::string Character::showStats() {
 
     // Convert name to std::string
-    std::string nameString = name;
+    std::string nameString = getName();
 
     return "Name: " + nameString + "\n"
-    "MaxHealth: " + std::to_string(maxHealth) +"\n"
+    "MaxHealth: " + std::to_string(getMaxHealth()) +"\n"
     "Health: " + std::to_string(getHealth()) + "\n"
-    "Attack: " + std::to_string(attack) + "\n"
-    "Defense: " + std::to_string(defense) + "\n"
-    "Speed: " + std::to_string(speed);
+    "Attack: " + std::to_string(getAttack()) + "\n"
+    "Defense: " + std::to_string(getDefense()) + "\n"
+    "Speed: " + std::to_string(getSpeed());
 }

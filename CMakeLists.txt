@@ -12,4 +12,6 @@ add_executable(rpg main.cpp
         include/Model/Character/Enemy/Enemy.h
         Utils.h
         src/Model/Combat/Combat.cpp
-        include/Model/Combat/Combat.h)
+        include/Model/Combat/Combat.h
+        Tables.h
+)

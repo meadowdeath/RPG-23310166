@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/Tables.h">
+			<Option target="rpg"/>
+		</Unit>
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/Utils.h">
 			<Option target="rpg"/>
 		</Unit>
