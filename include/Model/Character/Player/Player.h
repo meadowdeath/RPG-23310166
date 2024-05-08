@@ -10,14 +10,16 @@ class Player: public Character {
     //TODO: Implement Classes (Mage, Warrior, Rogue, etc..)
     //TODO: Implement Inventory
 private:
-    int level;
-    int experience;
+
+    int currentXP;
+    int leftOverXP;
+    int nextLevelXP;
 
     void levelUp();
 
 public:
     // Constructor to initialize the player
-    Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed);
+    Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP);
 
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
@@ -25,6 +27,14 @@ public:
 
     void gainExperience(int exp);
     //TODO: Implement use object
+
+    // Getters
+    int getCurrentXP();
+    int getLeftOverXP();
+    int getNextLevelXP();
+
+    // Setters
+
 
     // Methods to change the player's state
     void attacking();

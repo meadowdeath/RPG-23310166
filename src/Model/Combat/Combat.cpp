@@ -92,7 +92,7 @@ void Combat::printCharacterStats(Character* character, int maxWidth) {
               << std::setw(9) << std::left << character->getAttack() << "| "
               << std::setw(10) << std::left << character->getDefense() << "| "
               << std::setw(8) << std::left << character->getSpeed() << "| "
-              << std::setw(9) << std::left << "?" << " |" << std::endl;
+              << std::setw(9) << std::left << character->getLevel() << " |" << std::endl;
     printLine(maxWidth);
 }
 
@@ -219,21 +219,34 @@ void Combat::playerTurn() {
         printCentered(decision, encounterTableMaxWidth);
         printLine(encounterTableMaxWidth);
 
-        // If an enemy is dead, then the player can't attack it, so we remove it from the list
+        // If an enemy is dead, then the player can't attack it, so we temporarily remove it from the list
         for (int i = 0; i < enemies.size(); i++) {
+            // Copy the enemies vector to a new vector to temporarily remove the defeated enemies
+            std::vector<Enemy*> defeatedEnemies;
             if(enemies[i]->getHealth() <= 0){
-                enemies.erase(enemies.begin() + i);
+
+                std::string enemyName = std::to_string(i+1) + ". " + enemies[i]->getName()+ " (Dead)";
+                printCentered(enemyName, encounterTableMaxWidth);
+                printLine(encounterTableMaxWidth);
+                enemyName.clear();
+            } else {
+                std::string enemyName = std::to_string(i+1) + ". " + enemies[i]->getName();
+                printCentered(enemyName, encounterTableMaxWidth);
+                printLine(encounterTableMaxWidth);
+                enemyName.clear();
             }
-            std::string enemyName = std::to_string(i+1) + ". " + enemies[i]->getName();
-            printCentered(enemyName, encounterTableMaxWidth);
-            printLine(encounterTableMaxWidth);
-            enemyName.clear();
         }
         std::cout << "" << std::endl;
         std::cout << "Select an option: ";
         std::cin >> enemyOption;
+        // Check if the enemyOption is valid
         while(enemyOption < 1 || enemyOption > enemies.size()){
             std::cout << "Invalid option, please select a valid option: ";
+            std::cin >> enemyOption;
+        }
+        // Check if the enemy is dead
+        while (enemies[enemyOption-1]->getHealth() <= 0){
+            std::cout << "The enemy " << enemies[enemyOption-1]->getName() << " is dead, please select another enemy: ";
             std::cin >> enemyOption;
         }
         player->doAttack(enemies[enemyOption-1]);
@@ -323,28 +336,88 @@ void Combat::enemiesTurn() {
     showParticipantsStateDuringCombat(); // Show the current state of the participants during combat
 }
 
+void Combat::combatWon() {
+
+    int combatWonOption = 0;
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string combatResult = "The player " + player->getName() + " has won the combat!";
+    std::string option1 = "1. Go to the next level.";
+    std::string option2 = "2. Play again.";
+    std::string option3 = "3. Exit the game.";
+
+    int combatWonMaxWidth = static_cast<int>(std::max({title.length(), combatResult.length(), option1.length(), option2.length(), option3.length()}) + 6);
+
+    printLine(combatWonMaxWidth);
+    printCentered(title, combatWonMaxWidth);
+    printLine(combatWonMaxWidth);
+    printCentered(combatResult, combatWonMaxWidth);
+    printLine(combatWonMaxWidth);
+    std::cout << "| " << std::setw(combatWonMaxWidth / 3 - 1) << std::left << option1 << " | " << std::setw(combatWonMaxWidth / 3 - 4) << std::left << option2 << " | " << std::setw(combatWonMaxWidth / 3 - 2) << std::left << option3 << " |" << std::endl;
+    printLine(combatWonMaxWidth);
+    std::cout << "" << std::endl;
+
+    std::cout << "Select an option: ";
+    std::cin >> combatWonOption;
+    std::cout << "" << std::endl;
+
+    while (combatWonOption != 1 && combatWonOption != 2 && combatWonOption != 3){
+        std::cout << "Invalid option, please select a valid option: ";
+        std::cin >> combatWonOption;
+    }
+
+    if (combatWonOption == 1){
+        clearConsole();
+        // Go to the next level
+        std::cout << "" << std::endl;
+        std::cout << "The player " << player->getName() << " has reached the next level!" << std::endl;
+        std::cout << "" << std::endl;
+        // Play new level
+        player->restoreHealth();
+        for(auto& enemy : enemies){
+            enemy->improveStats();
+        }
+        startCombat();
+    } else if (combatWonOption == 2){
+        clearConsole();
+        // Play again
+        player->restoreHealth();
+        for(auto& enemy : enemies){
+            enemy->restoreHealth();
+        }
+        startCombat();
+    } else {
+        // Exit the game
+        exit(0);
+    }
+}
+
 void Combat::combatLost() {
 
     int combatLostOption = 0;
     std::string title = "'Press the number that indicates the action you want to perform.'";
-    std::string combatResult = "The player has lost the combat!";
+    std::string combatResult = "The player " + player->getName() + " has lost the combat!";
     std::string option1 = "1. Restart the combat.";
     std::string option2 = "2. Exit the game.";
 
-    int maxWidth = static_cast<int>(std::max({title.length(), combatResult.length(), option1.length(), option2.length()}) + 6);
+    int combatLostMaxWidth = static_cast<int>(std::max({title.length(), combatResult.length(), option1.length(), option2.length()}) + 6);
 
-    printLine(maxWidth);
-    printCentered(title, maxWidth);
-    printLine(maxWidth);
-    printCentered(combatResult, maxWidth);
-    printLine(maxWidth);
-    std::cout << "| " << std::setw(maxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(maxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
-    printLine(maxWidth);
+    printLine(combatLostMaxWidth);
+    printCentered(title, combatLostMaxWidth);
+    printLine(combatLostMaxWidth);
+    printCentered(combatResult, combatLostMaxWidth);
+    printLine(combatLostMaxWidth);
+    std::cout << "| " << std::setw(combatLostMaxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(combatLostMaxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
+    printLine(combatLostMaxWidth);
     std::cout << "" << std::endl;
 
     std::cout << "Select an option: ";
     std::cin >> combatLostOption;
     std::cout << "" << std::endl;
+
+    while (combatLostOption != 1 && combatLostOption != 2){
+        std::cout << "Invalid option, please select a valid option: ";
+        std::cin >> combatLostOption;
+    }
 
     if (combatLostOption == 1){
         // restore health of the previous combat
@@ -361,10 +434,9 @@ void Combat::combatLost() {
 
 void Combat::handleCombatResult() {
     if(player->getHealth() > 0 && std::all_of(enemies.begin(), enemies.end(), [](Enemy* i){return i->getHealth() <= 0;}) ){
-        std::cout << "+++++++++++++++++++++" << std::endl;
-        std::cout << "The player " << player->getName() << " has won the combat!" << std::endl;
-        std::cout << "+++++++++++++++++++++" << std::endl;
-        exit(0);
+
+        combatWon();
+
     } else if (player->getHealth() <= 0 && std::any_of(enemies.begin(), enemies.end(), [](Enemy* i){return i->getHealth() > 0;})){
 
         combatLost();

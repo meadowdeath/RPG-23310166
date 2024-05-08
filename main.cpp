@@ -7,11 +7,11 @@ int main() {
 
     // Change the health, attack, defense, and speed values to see how the game changes
 
-    auto *player = new Player("Frieren, The Slayer", 100, 1, 999, 4, 10);
+    auto *player = new Player("Frieren, The Slayer", 100, 100, 999, 4, 10, 1, 0, 0, 100);
 
     // Create 2 enemies
-    auto *enemy1 = new Enemy("Macht of Golden Land", 120, 120, 12, 4, 8, 10);
-    auto *enemy2 = new Enemy("Aura, The Guillotine", 50, 50, 5, 2, 7, 10);
+    auto *enemy1 = new Enemy("Macht of Golden Land", 120, 120, 12, 4, 8, 1, 49);
+    auto *enemy2 = new Enemy("Aura, The Guillotine", 50, 50, 5, 2, 7, 1, 50);
 
     // Create a vector with the participants
     std::vector<Enemy*> enemies = {enemy1, enemy2};

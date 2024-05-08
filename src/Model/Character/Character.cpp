@@ -7,13 +7,14 @@
 #include <utility>
 #include <cstring>
 
-Character::Character(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState) {
+Character::Character(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, CharacterState _currentState) {
     strcpy(name, _name);
     maxHealth = _maxHealth;
     health = _health;
     attack = _attack;
     defense = _defense;
     speed = _speed;
+    level = _level;
     currentState = _currentState;
 
 }
@@ -55,6 +56,10 @@ int Character::getDefense() {
 
 int Character::getSpeed() {
     return speed;
+}
+
+int Character::getLevel() {
+    return level;
 }
 
 // Setters

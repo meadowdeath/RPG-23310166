@@ -22,12 +22,13 @@ protected:
     int attack;
     int defense;
     int speed;
+    int level;
 
 public:
     CharacterState currentState; // This is the state of the character
 
     // Constructor to initialize the character's attributes.
-    Character(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, CharacterState _currentState);
+    Character(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, CharacterState _currentState);
 
     // Methods that will be implemented in the derived classes.
     virtual void doAttack(Character *target) = 0;
@@ -46,6 +47,7 @@ public:
     int getAttack();
     int getDefense();
     int getSpeed();
+    int getLevel();
 
     // Setters for the character's attributes.
 

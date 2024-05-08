@@ -7,10 +7,8 @@
 #include <utility>
 #include <iostream>
 
-Player::Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed) :
-Character(_name, _maxHealth, _health, _attack, _defense, _speed, CharacterState::IDLE) {
-    level = 1;
-    experience = 0;
+Player::Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP) :
+Character(_name, _maxHealth, _health, _attack, _defense, _speed, _level, CharacterState::IDLE) {
 }
 
 void Player::doAttack(Character *target) {
@@ -42,16 +40,35 @@ void Player::takeDamage(int damage) {
 }
 
 void Player::levelUp() {
-    level++;
+    //level++;
 }
 
+/*
 void Player::gainExperience(int exp) {
     experience += exp;
     if (experience >= 100) {
         levelUp();
         experience = 100-experience;
     }
+}*/
+
+// Getters
+
+int Player::getCurrentXP() {
+    return currentXP;
 }
+
+int Player::getLeftOverXP() {
+    return leftOverXP;
+}
+
+int Player::getNextLevelXP() {
+    return nextLevelXP;
+}
+
+// Setters
+
+// Methods to change the player's state
 
 void Player::attacking() {
     changeState(CharacterState::ATTACK);

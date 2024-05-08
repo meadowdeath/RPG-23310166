@@ -10,9 +10,9 @@
 
 using namespace combat_utils;
 
-Enemy::Enemy(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _experience) :
-Character(_name, _maxHealth, _health, _attack, _defense, _speed, CharacterState::IDLE) {
-    experience = _experience;
+Enemy::Enemy(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _givenXP) :
+Character(_name, _maxHealth, _health, _attack, _defense, _speed, _level, CharacterState::IDLE) {
+    givenXP = _givenXP;
 }
 
 void Enemy::doAttack(Character *target) {
@@ -41,9 +41,49 @@ void Enemy::takeDamage(int damage) {
     health-= trueDamage;
 }
 
-int Enemy::getExperience() {
-    return experience;
+// Getters
+
+int Enemy::getGivenXP() {
+    return givenXP;
 }
+
+// Setters
+
+void Enemy::setMaxHealth() {
+    maxHealth = maxHealth + 10;
+}
+
+void Enemy::setAttack() {
+    attack = attack + 2;
+}
+
+void Enemy::setDefense() {
+    defense = defense + 2;
+}
+
+void Enemy::setSpeed() {
+    speed = speed + 1;
+}
+
+void Enemy::setLevel() {
+    level = level + 1;
+}
+
+void Enemy::setGivenXP() {
+    givenXP = givenXP + 10;
+}
+
+void Enemy::improveStats() {
+    setMaxHealth();
+    restoreHealth();
+    setAttack();
+    setDefense();
+    setSpeed();
+    setLevel();
+    setGivenXP();
+}
+
+// Methods to change the enemy's state
 
 void Enemy::attacking() {
     changeState(CharacterState::ATTACK);

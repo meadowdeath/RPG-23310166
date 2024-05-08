@@ -9,16 +9,27 @@
 
 class Enemy: public Character{
 private:
-    int experience;
+    int givenXP;
 public:
     // Constructor to initialize the enemy.
-    Enemy(char _name[40], int maxHealth, int _health, int _attack, int _defense, int _speed, int _experience);
+    Enemy(char _name[40], int maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _givenXP);
 
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
     void doDefend();
 
-    int getExperience();
+    // Getters
+    int getGivenXP();
+
+    // Setters
+    void setMaxHealth();
+    void setAttack();
+    void setDefense();
+    void setSpeed();
+    void setLevel();
+    void setGivenXP();
+
+    void improveStats();
 
     //Methods to change the enemy's state
     void attacking();
