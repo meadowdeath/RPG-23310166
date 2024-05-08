@@ -26,6 +26,8 @@ void Character::changeState(CharacterState newState) {
     currentState = newState;
 }
 
+// Setters
+
 std::string Character::getName() {
     return name;
 }
@@ -55,6 +57,11 @@ int Character::getSpeed() {
     return speed;
 }
 
+// Setters
+
+void Character::restoreHealth() {
+    health = maxHealth;
+}
 
 std::string Character::showStats() {
 

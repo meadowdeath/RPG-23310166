@@ -47,6 +47,10 @@ public:
     int getDefense();
     int getSpeed();
 
+    // Setters for the character's attributes.
+
+    void restoreHealth();
+
     // Method to represent the character as a string.
     std::string showStats();
 };

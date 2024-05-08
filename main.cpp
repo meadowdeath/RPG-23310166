@@ -7,7 +7,7 @@ int main() {
 
     // Change the health, attack, defense, and speed values to see how the game changes
 
-    auto *player = new Player("Frieren, The Slayer", 100, 100, 999, 4, 10);
+    auto *player = new Player("Frieren, The Slayer", 100, 1, 999, 4, 10);
 
     // Create 2 enemies
     auto *enemy1 = new Enemy("Macht of Golden Land", 120, 120, 12, 4, 8, 10);

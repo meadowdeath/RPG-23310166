@@ -12,20 +12,6 @@ using namespace tables_utils;
 
 Combat::Combat(Player* _player, const std::vector<Enemy*>& _enemies) : player(_player), enemies(_enemies) {}
 
-/*
-void Combat::showParticipantsState() {
-    // Show the current state of the participants
-    std::cout << "The current state of the participants is: " << std::endl;
-
-    std::cout << "+-------------------+" << std::endl;
-    std::cout << player->showStats() << std::endl;
-    std::cout << "+-------------------+" << std::endl;
-    for (auto& enemy : enemies) {
-        std::cout << enemy->showStats() << std::endl;
-        std::cout << "+-------------------+" << std::endl;
-    }
-}*/
-
 void Combat::showParticipantsState() {
 
     // Stats table Begins...
@@ -286,7 +272,7 @@ void Combat::playerTurn() {
         }
     }
 
-    
+
 }
 
 void Combat::enemiesTurn() {
@@ -337,6 +323,42 @@ void Combat::enemiesTurn() {
     showParticipantsStateDuringCombat(); // Show the current state of the participants during combat
 }
 
+void Combat::combatLost() {
+
+    int combatLostOption = 0;
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string combatResult = "The player has lost the combat!";
+    std::string option1 = "1. Restart the combat.";
+    std::string option2 = "2. Exit the game.";
+
+    int maxWidth = static_cast<int>(std::max({title.length(), combatResult.length(), option1.length(), option2.length()}) + 6);
+
+    printLine(maxWidth);
+    printCentered(title, maxWidth);
+    printLine(maxWidth);
+    printCentered(combatResult, maxWidth);
+    printLine(maxWidth);
+    std::cout << "| " << std::setw(maxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(maxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
+    printLine(maxWidth);
+    std::cout << "" << std::endl;
+
+    std::cout << "Select an option: ";
+    std::cin >> combatLostOption;
+    std::cout << "" << std::endl;
+
+    if (combatLostOption == 1){
+        // restore health of the previous combat
+        player->restoreHealth();
+        for(auto& enemy : enemies){
+            enemy->restoreHealth();
+        }
+        clearConsole();
+        startCombat();
+    } else {
+        exit(0);
+    }
+}
+
 void Combat::handleCombatResult() {
     if(player->getHealth() > 0 && std::all_of(enemies.begin(), enemies.end(), [](Enemy* i){return i->getHealth() <= 0;}) ){
         std::cout << "+++++++++++++++++++++" << std::endl;
@@ -344,10 +366,9 @@ void Combat::handleCombatResult() {
         std::cout << "+++++++++++++++++++++" << std::endl;
         exit(0);
     } else if (player->getHealth() <= 0 && std::any_of(enemies.begin(), enemies.end(), [](Enemy* i){return i->getHealth() > 0;})){
-        std::cout << "+++++++++++++++++++++" << std::endl;
-        std::cout << "The player " << player->getName() << " has lost the combat!" << std::endl;
-        std::cout << "+++++++++++++++++++++" << std::endl;
-        exit(0);
+
+        combatLost();
+
     } else{
         std::cout << "+++++++++++++++++++++" << std::endl;
         std::cout << "The combat hasn't ended yet!" << std::endl;
