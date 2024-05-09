@@ -9,6 +9,9 @@
 
 Player::Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP) :
 Character(_name, _maxHealth, _health, _attack, _defense, _speed, _level, CharacterState::IDLE) {
+    currentXP = _currentXP;
+    leftOverXP = _leftOverXP;
+    nextLevelXP = _nextLevelXP;
 }
 
 void Player::doAttack(Character *target) {
@@ -39,10 +42,6 @@ void Player::takeDamage(int damage) {
     health-= trueDamage;
 }
 
-void Player::levelUp() {
-    //level++;
-}
-
 /*
 void Player::gainExperience(int exp) {
     experience += exp;
@@ -67,6 +66,59 @@ int Player::getNextLevelXP() {
 }
 
 // Setters
+
+void Player::setMaxHealth() {
+    maxHealth = maxHealth + 10;
+}
+
+void Player::setAttack() {
+    attack = attack + 2;
+}
+
+void Player::setDefense() {
+    defense = defense + 2;
+}
+
+void Player::setSpeed() {
+    speed = speed + 1;
+}
+
+void Player::setLevel() {
+    level = level + 1;
+}
+
+void Player::improvePlayerStats(int chosenStat) {
+    switch (chosenStat) {
+        case 1:
+            setMaxHealth();
+            restoreHealth();
+            break;
+        case 2:
+            setAttack();
+            break;
+        case 3:
+            setDefense();
+            break;
+        case 4:
+            setSpeed();
+            break;
+        default:
+            std::cout << "Invalid option" << std::endl;
+            break;
+    }
+}
+
+void Player::setCurrentXP(int _currentXP) {
+    currentXP = _currentXP;
+}
+
+void Player::setLeftOverXP(int _leftOverXP) {
+    leftOverXP = _leftOverXP;
+}
+
+void Player::setNextLevelXP() {
+    nextLevelXP = nextLevelXP + 25;
+}
 
 // Methods to change the player's state
 

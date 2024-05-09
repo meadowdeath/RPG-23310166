@@ -73,7 +73,7 @@ void Enemy::setGivenXP() {
     givenXP = givenXP + 10;
 }
 
-void Enemy::improveStats() {
+void Enemy::improveEnemyStats() {
     setMaxHealth();
     restoreHealth();
     setAttack();

@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 
 using namespace tables_utils;
 
@@ -17,11 +18,12 @@ void Combat::showParticipantsState() {
     // Stats table Begins...
 
     std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string level = "Level: " + std::to_string(enemies[1]->getLevel());
     std::string question = "Start Encounter '1'?";
     std::string option1 = "1. Yes";
     std::string option2 = "2. No";
 
-    int statsMaxWidth = static_cast<int>(std::max({title.length(), question.length(), option1.length(), option2.length()}) + 6);
+    int statsMaxWidth = static_cast<int>(std::max({title.length(), level.length(), question.length(), option1.length(), option2.length()}) + 6);
 
     printLine(statsMaxWidth);
     printCentered(title, statsMaxWidth);
@@ -41,7 +43,8 @@ void Combat::showParticipantsState() {
         enemyName.clear();
     }
 
-
+    printCentered(level, statsMaxWidth);
+    printLine(statsMaxWidth);
     printCentered(question, statsMaxWidth);
     printLine(statsMaxWidth);
     std::cout << "| " << std::setw(statsMaxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(statsMaxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
@@ -56,12 +59,15 @@ void Combat::showParticipantsStateDuringCombat() {
     // Stats During Combat table Begins...
 
     std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string level = "Level: " + std::to_string(enemies[1]->getLevel());
     std::string result = "The current state of the participants during combat is:";
 
-    int statsMaxWidth = static_cast<int>(std::max({title.length(), result.length()}) + 6);
+    int statsMaxWidth = static_cast<int>(std::max({title.length(), level.length(), result.length()}) + 6);
 
     printLine(statsMaxWidth);
     printCentered(title, statsMaxWidth);
+    printLine(statsMaxWidth);
+    printCentered(level, statsMaxWidth);
     printLine(statsMaxWidth);
     printCentered(result, statsMaxWidth);
     printLine(statsMaxWidth);
@@ -130,16 +136,19 @@ void Combat::sortTurns() {
     // Order table Begins...
 
     std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string level = "Level: " + std::to_string(enemies[1]->getLevel());
     std::string decision = "You have chosen to fight!";
     std::string order = "The order of the turns of the combat based in 'speed' is:";
     std::string question = "Do you want to check the current state of the participants?";
     std::string option1 = "1. Yes.";
     std::string option2 = "2. No.";
 
-    int orderTableMaxWidth = static_cast<int>(std::max({title.length(), decision.length(), order.length(), question.length(), option1.length(), option2.length()}) + 6);
+    int orderTableMaxWidth = static_cast<int>(std::max({title.length(), level.length(), decision.length(), order.length(), question.length(), option1.length(), option2.length()}) + 6);
 
     printLine(orderTableMaxWidth);
     printCentered(title, orderTableMaxWidth);
+    printLine(orderTableMaxWidth);
+    printCentered(level, orderTableMaxWidth);
     printLine(orderTableMaxWidth);
     printCentered(decision, orderTableMaxWidth);
     printLine(orderTableMaxWidth);
@@ -182,6 +191,8 @@ void Combat::sortTurns() {
 }
 
 void Combat::playerTurn() {
+
+    // Player's turn Table Begins...
 
     int playerOption;
     std::string turn = "Player's turn";
@@ -237,6 +248,9 @@ void Combat::playerTurn() {
             }
         }
         std::cout << "" << std::endl;
+
+        // Player's turn Table Ends...
+
         std::cout << "Select an option: ";
         std::cin >> enemyOption;
         // Check if the enemyOption is valid
@@ -336,25 +350,110 @@ void Combat::enemiesTurn() {
     showParticipantsStateDuringCombat(); // Show the current state of the participants during combat
 }
 
+void Combat::improvePlayerStats() {
+
+    // improvePlayerStats Table Begins...
+
+    int improvePlayerStatsOption = 0;
+    std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string decision = "The player " + player->getName() + " can improve one of the following options:";
+    std::string option1 = "1. MaxHealth.";
+    std::string option2 = "2. Attack.";
+    std::string option3 = "3. Defense.";
+    std::string option4 = "4. Speed.";
+
+    int improvePlayerStatsMaxWidth = static_cast<int>(std::max({title.length(), decision.length(), option1.length(), option2.length(), option3.length(), option4.length()}) + 6);
+
+    printLine(improvePlayerStatsMaxWidth);
+    printCentered(title, improvePlayerStatsMaxWidth);
+    printLine(improvePlayerStatsMaxWidth);
+    printCentered(decision, improvePlayerStatsMaxWidth);
+    printLine(improvePlayerStatsMaxWidth);
+    std::cout << "| " << std::setw(improvePlayerStatsMaxWidth / 4 - 1) << std::left << option1 << " | " << std::setw(improvePlayerStatsMaxWidth / 4 - 3) << std::left << option2 << " | " << std::setw(improvePlayerStatsMaxWidth / 4 - 1) << std::left << option3 << " | " << std::setw(improvePlayerStatsMaxWidth / 4 - 3) << std::left << option4 << " |" << std::endl;
+    printLine(improvePlayerStatsMaxWidth);
+    std::cout << "" << std::endl;
+
+    std::cout << "Select an option: ";
+    std::cin >> improvePlayerStatsOption;
+
+    while (improvePlayerStatsOption != 1 && improvePlayerStatsOption != 2 && improvePlayerStatsOption != 3 && improvePlayerStatsOption != 4){
+        std::cout << "Invalid option, please select a valid option: ";
+        std::cin >> improvePlayerStatsOption;
+    }
+
+    std::cout << "" << std::endl;
+
+    if (improvePlayerStatsOption == 1){
+        player->improvePlayerStats(1);
+        std::cout << "The player " << player->getName() << " has improved its MaxHealth!" << std::endl;
+    } else if (improvePlayerStatsOption == 2){
+        player->improvePlayerStats(2);
+        std::cout << "The player " << player->getName() << " has improved its Attack!" << std::endl;
+    } else if (improvePlayerStatsOption == 3){
+        player->improvePlayerStats(3);
+        std::cout << "The player " << player->getName() << " has improved its Defense!" << std::endl;
+    } else {
+        player->improvePlayerStats(4);
+        std::cout << "The player " << player->getName() << " has improved its Speed!" << std::endl;
+    }
+
+    std:: cout << "" << std::endl;
+    std::string playerStats = "The new stats of " + player->getName() + " are:";
+
+    int improvedPlayerStatsMaxWidth = static_cast<int>(std::max({title.length(), playerStats.length()}) + 6);
+
+    printLine(improvedPlayerStatsMaxWidth);
+    printCentered(title, improvedPlayerStatsMaxWidth);
+    printLine(improvedPlayerStatsMaxWidth);
+    printCentered(playerStats, improvedPlayerStatsMaxWidth);
+    printLine(improvedPlayerStatsMaxWidth);
+    printCharacterStats(player, improvedPlayerStatsMaxWidth);
+    std::cout << "" << std::endl;
+
+    // improvePlayerStats Table Ends...
+
+    int continueOption;
+    std::cout << "press '1' to continue..." << std::endl;
+    std::cin >> continueOption;
+
+    while(continueOption != 1){
+        std::cout << "Invalid option, please press '1' to continue... ";
+        std::cin >> continueOption;
+    }
+
+    clearConsole();
+    std::cout << "" << std::endl;
+
+}
+
+
+
 void Combat::combatWon() {
+
+    // Combat Won Table Begins...
 
     int combatWonOption = 0;
     std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string level = "Level: " + std::to_string(enemies[1]->getLevel());
     std::string combatResult = "The player " + player->getName() + " has won the combat!";
     std::string option1 = "1. Go to the next level.";
     std::string option2 = "2. Play again.";
     std::string option3 = "3. Exit the game.";
 
-    int combatWonMaxWidth = static_cast<int>(std::max({title.length(), combatResult.length(), option1.length(), option2.length(), option3.length()}) + 6);
+    int combatWonMaxWidth = static_cast<int>(std::max({title.length(), level.length(), combatResult.length(), option1.length(), option2.length(), option3.length()}) + 6);
 
     printLine(combatWonMaxWidth);
     printCentered(title, combatWonMaxWidth);
+    printLine(combatWonMaxWidth);
+    printCentered(level, combatWonMaxWidth);
     printLine(combatWonMaxWidth);
     printCentered(combatResult, combatWonMaxWidth);
     printLine(combatWonMaxWidth);
     std::cout << "| " << std::setw(combatWonMaxWidth / 3 - 1) << std::left << option1 << " | " << std::setw(combatWonMaxWidth / 3 - 4) << std::left << option2 << " | " << std::setw(combatWonMaxWidth / 3 - 2) << std::left << option3 << " |" << std::endl;
     printLine(combatWonMaxWidth);
     std::cout << "" << std::endl;
+
+    // Combat Won Table Ends...
 
     std::cout << "Select an option: ";
     std::cin >> combatWonOption;
@@ -374,7 +473,7 @@ void Combat::combatWon() {
         // Play new level
         player->restoreHealth();
         for(auto& enemy : enemies){
-            enemy->improveStats();
+            enemy->improveEnemyStats();
         }
         startCombat();
     } else if (combatWonOption == 2){
@@ -393,22 +492,29 @@ void Combat::combatWon() {
 
 void Combat::combatLost() {
 
+    // Combat Lost Table Begins...
+
     int combatLostOption = 0;
     std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string level = "Level: " + std::to_string(enemies[1]->getLevel());
     std::string combatResult = "The player " + player->getName() + " has lost the combat!";
     std::string option1 = "1. Restart the combat.";
     std::string option2 = "2. Exit the game.";
 
-    int combatLostMaxWidth = static_cast<int>(std::max({title.length(), combatResult.length(), option1.length(), option2.length()}) + 6);
+    int combatLostMaxWidth = static_cast<int>(std::max({title.length(), level.length(), combatResult.length(), option1.length(), option2.length()}) + 6);
 
     printLine(combatLostMaxWidth);
     printCentered(title, combatLostMaxWidth);
+    printLine(combatLostMaxWidth);
+    printCentered(level, combatLostMaxWidth);
     printLine(combatLostMaxWidth);
     printCentered(combatResult, combatLostMaxWidth);
     printLine(combatLostMaxWidth);
     std::cout << "| " << std::setw(combatLostMaxWidth / 2 - 2) << std::left << option1 << " | " << std::setw(combatLostMaxWidth / 2 - 1) << std::left << option2 << " |" << std::endl;
     printLine(combatLostMaxWidth);
     std::cout << "" << std::endl;
+
+    // Combat Lost Table Ends...
 
     std::cout << "Select an option: ";
     std::cin >> combatLostOption;
@@ -434,11 +540,21 @@ void Combat::combatLost() {
 
 void Combat::handleCombatResult() {
     if(player->getHealth() > 0 && std::all_of(enemies.begin(), enemies.end(), [](Enemy* i){return i->getHealth() <= 0;}) ){
-
+        // If the player is alive and all the enemies are dead, the getGivenXP of each enemy is added to the player's currentXP
+        for(auto& enemy : enemies){
+            int getEnemyGivenXP = enemy->getGivenXP();
+            player->setCurrentXP(player->getCurrentXP() + getEnemyGivenXP);
+        }
         combatWon();
 
     } else if (player->getHealth() <= 0 && std::any_of(enemies.begin(), enemies.end(), [](Enemy* i){return i->getHealth() > 0;})){
-
+        // If the player is dead, he obtains the getGivenXP of the enemies that are dead
+        for(auto& enemy : enemies){
+            if(enemy->getHealth() <= 0){
+                int getEnemyGivenXP = enemy->getGivenXP();
+                player->setCurrentXP(player->getCurrentXP() + getEnemyGivenXP);
+            }
+        }
         combatLost();
 
     } else{
@@ -450,19 +566,34 @@ void Combat::handleCombatResult() {
 
 void Combat::startCombat() {
 
+    while((player->getNextLevelXP()-player->getCurrentXP())<=0){
+        // Obtain the absolute value of the leftOverXP
+        int currentXP = player->getCurrentXP();
+        int nextLevelXP = player->getNextLevelXP();
+        int leftOverXP = currentXP - nextLevelXP;
+        player->setCurrentXP(leftOverXP);
+        player->setLeftOverXP(0);
+        player->setNextLevelXP();
+        player->setLevel();
+        improvePlayerStats();
+    }
+
     int playerOption;
 
     // Welcome table Begins...
 
     std::string title = "'Press the number that indicates the action you want to perform.'";
+    std::string level = "Level: " + std::to_string(enemies[1]->getLevel());
     std::string question = "You have found some enemies, wanna fight?";
     std::string option1 = "1. Yes.";
     std::string option2 = "2. No.";
 
-    int maxWidth = static_cast<int>(std::max({title.length(), question.length(), option1.length(), option2.length()}) + 6);
+    int maxWidth = static_cast<int>(std::max({title.length(), level.length(), question.length(), option1.length(), option2.length()}) + 6);
 
     printLine(maxWidth);
     printCentered(title, maxWidth);
+    printLine(maxWidth);
+    printCentered(level, maxWidth);
     printLine(maxWidth);
     printCentered(question, maxWidth);
     printLine(maxWidth);
@@ -542,6 +673,8 @@ void Combat::startCombat() {
 
             printLine(encounterTableMaxWidth);
             printCentered(action, encounterTableMaxWidth);
+            printLine(encounterTableMaxWidth);
+            printCentered(level, encounterTableMaxWidth);
             printLine(encounterTableMaxWidth);
             printCentered(encounter, encounterTableMaxWidth);
             printLine(encounterTableMaxWidth);

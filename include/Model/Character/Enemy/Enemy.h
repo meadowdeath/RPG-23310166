@@ -29,7 +29,7 @@ public:
     void setLevel();
     void setGivenXP();
 
-    void improveStats();
+    void improveEnemyStats();
 
     //Methods to change the enemy's state
     void attacking();

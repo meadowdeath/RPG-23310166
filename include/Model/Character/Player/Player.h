@@ -15,8 +15,6 @@ private:
     int leftOverXP;
     int nextLevelXP;
 
-    void levelUp();
-
 public:
     // Constructor to initialize the player
     Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP);
@@ -25,7 +23,7 @@ public:
     void takeDamage(int damage) override;
     void doDefend();
 
-    void gainExperience(int exp);
+    //void gainExperience(int exp);
     //TODO: Implement use object
 
     // Getters
@@ -34,7 +32,16 @@ public:
     int getNextLevelXP();
 
     // Setters
+    void setMaxHealth();
+    void setAttack();
+    void setDefense();
+    void setSpeed();
+    void setLevel();
+    void setCurrentXP(int _currentXP);
+    void setLeftOverXP(int _leftOverXP);
+    void setNextLevelXP();
 
+    void improvePlayerStats(int chosenStat);
 
     // Methods to change the player's state
     void attacking();

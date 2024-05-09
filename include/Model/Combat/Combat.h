@@ -30,6 +30,9 @@ private:
     // Method to give the enemies the option to attack or defend
     void enemiesTurn();
 
+    // Method that handles player's stats improvements
+    void improvePlayerStats();
+
     // Method that handles what happens when the player wins the combat
     void combatWon();
 
