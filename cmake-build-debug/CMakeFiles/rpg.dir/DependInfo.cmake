@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Enemy/Enemy.cpp" "CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj" "gcc" "CMakeFiles/rpg.dir/src/Model/Character/Enemy/Enemy.cpp.obj.d"
   "E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Player/Player.cpp" "CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj" "gcc" "CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj.d"
   "E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/src/Model/Combat/Combat.cpp" "CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj" "gcc" "CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj.d"
+  "E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/src/Model/Files/FileHandler.cpp" "CMakeFiles/rpg.dir/src/Model/Files/FileHandler.cpp.obj" "gcc" "CMakeFiles/rpg.dir/src/Model/Files/FileHandler.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

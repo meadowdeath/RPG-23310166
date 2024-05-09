@@ -14,4 +14,6 @@ add_executable(rpg main.cpp
         src/Model/Combat/Combat.cpp
         include/Model/Combat/Combat.h
         Tables.h
+        include/Model/Files/FileHandler.h
+        src/Model/Files/FileHandler.cpp
 )

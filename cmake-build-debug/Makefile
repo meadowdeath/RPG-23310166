@@ -248,6 +248,30 @@ src/Model/Combat/Combat.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.s
 .PHONY : src/Model/Combat/Combat.cpp.s
 
+src/Model/Files/FileHandler.obj: src/Model/Files/FileHandler.cpp.obj
+.PHONY : src/Model/Files/FileHandler.obj
+
+# target to build an object file
+src/Model/Files/FileHandler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Files/FileHandler.cpp.obj
+.PHONY : src/Model/Files/FileHandler.cpp.obj
+
+src/Model/Files/FileHandler.i: src/Model/Files/FileHandler.cpp.i
+.PHONY : src/Model/Files/FileHandler.i
+
+# target to preprocess a source file
+src/Model/Files/FileHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Files/FileHandler.cpp.i
+.PHONY : src/Model/Files/FileHandler.cpp.i
+
+src/Model/Files/FileHandler.s: src/Model/Files/FileHandler.cpp.s
+.PHONY : src/Model/Files/FileHandler.s
+
+# target to generate assembly for a file
+src/Model/Files/FileHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\rpg.dir\build.make CMakeFiles/rpg.dir/src/Model/Files/FileHandler.cpp.s
+.PHONY : src/Model/Files/FileHandler.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -272,6 +296,9 @@ help:
 	@echo ... src/Model/Combat/Combat.obj
 	@echo ... src/Model/Combat/Combat.i
 	@echo ... src/Model/Combat/Combat.s
+	@echo ... src/Model/Files/FileHandler.obj
+	@echo ... src/Model/Files/FileHandler.i
+	@echo ... src/Model/Files/FileHandler.s
 .PHONY : help
 
 

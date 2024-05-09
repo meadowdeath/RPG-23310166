@@ -104,11 +104,9 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/bits/basic_string.tcc \
  C:/msys64/mingw64/include/c++/13.1.0/utility \
  C:/msys64/mingw64/include/c++/13.1.0/bits/stl_relops.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Enemy/Enemy.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h \
- E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Tables.h \
- C:/msys64/mingw64/include/c++/13.1.0/iostream \
- C:/msys64/mingw64/include/c++/13.1.0/ostream \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Files/FileHandler.h \
+ C:/msys64/mingw64/include/c++/13.1.0/fstream \
+ C:/msys64/mingw64/include/c++/13.1.0/istream \
  C:/msys64/mingw64/include/c++/13.1.0/ios \
  C:/msys64/mingw64/include/c++/13.1.0/exception \
  C:/msys64/mingw64/include/c++/13.1.0/bits/exception_ptr.h \
@@ -148,16 +146,23 @@ CMakeFiles/rpg.dir/src/Model/Combat/Combat.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/ctype_inline.h \
  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets.tcc \
  C:/msys64/mingw64/include/c++/13.1.0/bits/basic_ios.tcc \
+ C:/msys64/mingw64/include/c++/13.1.0/ostream \
  C:/msys64/mingw64/include/c++/13.1.0/bits/ostream.tcc \
- C:/msys64/mingw64/include/c++/13.1.0/istream \
  C:/msys64/mingw64/include/c++/13.1.0/bits/istream.tcc \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/fstream.tcc \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Enemy/Enemy.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/include/Model/Character/Character.h \
+ E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/Tables.h \
+ C:/msys64/mingw64/include/c++/13.1.0/iostream \
  C:/msys64/mingw64/include/c++/13.1.0/iomanip \
  C:/msys64/mingw64/include/c++/13.1.0/locale \
  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.h \
  C:/msys64/mingw64/include/c++/13.1.0/ctime \
  C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/time_members.h \
  C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/messages_members.h \
- C:/msys64/mingw64/include/c++/13.1.0/bits/codecvt.h \
  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.tcc \
  C:/msys64/mingw64/include/c++/13.1.0/bits/locale_conv.h \
  C:/msys64/mingw64/include/c++/13.1.0/bits/quoted_string.h \

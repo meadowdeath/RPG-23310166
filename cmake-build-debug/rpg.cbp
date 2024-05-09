@@ -98,6 +98,9 @@
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/include/Model/Combat/Combat.h">
 			<Option target="rpg"/>
 		</Unit>
+		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/include/Model/Files/FileHandler.h">
+			<Option target="rpg"/>
+		</Unit>
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/main.cpp">
 			<Option target="rpg"/>
 		</Unit>
@@ -111,6 +114,9 @@
 			<Option target="rpg"/>
 		</Unit>
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/src/Model/Combat/Combat.cpp">
+			<Option target="rpg"/>
+		</Unit>
+		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/src/Model/Files/FileHandler.cpp">
 			<Option target="rpg"/>
 		</Unit>
 		<Unit filename="E:/CETI/Segundo Semestre/POO/2P-RPG/2P-RPG/CMakeLists.txt">

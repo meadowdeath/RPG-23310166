@@ -4,8 +4,9 @@
 
 #include "../../../../include/Model/Character/Player/Player.h"
 
-#include <utility>
 #include <iostream>
+#include <fstream>
+#include <cstring>
 
 Player::Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP) :
 Character(_name, _maxHealth, _health, _attack, _defense, _speed, _level, CharacterState::IDLE) {
@@ -132,4 +133,57 @@ void Player::defending() {
 
 void Player::idle() {
     changeState(CharacterState::IDLE);
+}
+
+
+// Serialize the player's attributes
+void Player::serialize(const char* filename) {
+    std::ofstream file(filename); {
+        if (file.is_open()) {
+            file << name << std::endl;
+            file << maxHealth << std::endl;
+            file << health << std::endl;
+            file << attack << std::endl;
+            file << defense << std::endl;
+            file << speed << std::endl;
+            file << level << std::endl;
+            file << currentXP << std::endl;
+            file << leftOverXP << std::endl;
+            file << nextLevelXP << std::endl;
+        } else {
+            std::cout << "Error opening file" << std::endl;
+
+        }
+    }
+}
+
+// Unserialize the player's attributes
+    void Player::unserialize(const char *filename) {
+    std::ifstream file(filename);
+    if (file.is_open()) {
+        file >> name;
+        file >> maxHealth;
+        file >> health;
+        file >> attack;
+        file >> defense;
+        file >> speed;
+        file >> level;
+        file >> currentXP;
+        file >> leftOverXP;
+        file >> nextLevelXP;
+        file.close();
+    } else {
+        std::cerr << "The file could not be opened. Predefined data will be used instead." << std::endl;
+        // Use predifined data
+        strncpy(name, "Frieren The Slayer", sizeof(name));
+        maxHealth = 100;
+        health = 1;
+        attack = 999;
+        defense = 4;
+        speed = 10;
+        level = 1;
+        currentXP = 0;
+        leftOverXP = 0;
+        nextLevelXP = 100;
+    }
 }

@@ -485,6 +485,8 @@ void Combat::combatWon() {
         }
         startCombat();
     } else {
+        // Save the player's data in a file
+        player->serialize("player_data.txt");
         // Exit the game
         exit(0);
     }
@@ -534,6 +536,9 @@ void Combat::combatLost() {
         clearConsole();
         startCombat();
     } else {
+        // Save the player's data in a file
+        player->serialize("player_data.txt");
+        // Exit the game
         exit(0);
     }
 }
@@ -687,6 +692,8 @@ void Combat::startCombat() {
     } else {
         std::cout << "" << std::endl;
         std::cout << "You have chosen to run away" << std::endl;
+        // Save the player's data in a file
+        player->serialize("player_data.txt");
         // Exit the program
         exit(0);
     }
