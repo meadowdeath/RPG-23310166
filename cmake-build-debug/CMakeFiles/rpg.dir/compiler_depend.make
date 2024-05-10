@@ -469,6 +469,7 @@ CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj: E:/CETI/Segundo\ S
   C:/msys64/mingw64/include/c++/13.1.0/bits/range_access.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/refwrap.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/requires_hosted.h \
+  C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc \
   C:/msys64/mingw64/include/c++/13.1.0/bits/std_abs.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/stl_algobase.h \
   C:/msys64/mingw64/include/c++/13.1.0/bits/stl_construct.h \
@@ -511,6 +512,7 @@ CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj: E:/CETI/Segundo\ S
   C:/msys64/mingw64/include/c++/13.1.0/new \
   C:/msys64/mingw64/include/c++/13.1.0/ostream \
   C:/msys64/mingw64/include/c++/13.1.0/pstl/pstl_config.h \
+  C:/msys64/mingw64/include/c++/13.1.0/sstream \
   C:/msys64/mingw64/include/c++/13.1.0/stdexcept \
   C:/msys64/mingw64/include/c++/13.1.0/stdlib.h \
   C:/msys64/mingw64/include/c++/13.1.0/streambuf \
@@ -1259,6 +1261,10 @@ C:/msys64/mingw64/include/string.h:
 
 E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Character/Enemy/Enemy.cpp:
 
+C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc:
+
+C:/msys64/mingw64/include/c++/13.1.0/sstream:
+
 E:/CETI/Segundo\ Semestre/POO/2P-RPG/2P-RPG/src/Model/Combat/Combat.cpp:
 
 C:/msys64/mingw64/include/c++/13.1.0/bits/locale_conv.h:
@@ -1269,8 +1275,6 @@ C:/msys64/mingw64/include/c++/13.1.0/bits/locale_facets_nonio.tcc:
 
 C:/msys64/mingw64/include/c++/13.1.0/bits/quoted_string.h:
 
-C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc:
-
 C:/msys64/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h:
 
 C:/msys64/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h:
@@ -1278,8 +1282,6 @@ C:/msys64/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h:
 C:/msys64/mingw64/include/c++/13.1.0/iomanip:
 
 C:/msys64/mingw64/include/c++/13.1.0/locale:
-
-C:/msys64/mingw64/include/c++/13.1.0/sstream:
 
 C:/msys64/mingw64/include/c++/13.1.0/x86_64-w64-mingw32/bits/messages_members.h:
 

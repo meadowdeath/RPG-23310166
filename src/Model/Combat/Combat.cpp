@@ -102,35 +102,6 @@ void Combat::printCharacterStats(Character* character, int maxWidth) {
     printLine(maxWidth);
 }
 
-
-/*void Combat::sortTurns2() {
-    // Order the turns of the participants
-    std::vector<Character*> combatants;
-    int combatParticipants = 0;
-    combatants.push_back(player);
-    for (auto& enemy : enemies) {
-        combatants.push_back(enemy);
-    }
-    std::sort(combatants.begin(), combatants.end(), [](Character* a, Character* b) {
-        return a->getSpeed() > b->getSpeed();
-    });
-
-    std::cout << "The order of the turns of the combat based in 'speed' is: " << std::endl;
-    for (auto& combatant : combatants) {
-        combatParticipants++;
-        std::cout << combatParticipants <<". " << combatant->getName();
-        if(combatant->getName() == player->getName()){
-            std::cout << " (Player)" << std::endl;
-        } else {
-            std::cout << " (Enemy)" << std::endl;
-        }
-    }
-
-    showParticipantsState(); // Show the current state of the participants
-
-}
-*/
-
 void Combat::sortTurns() {
 
     // Order table Begins...

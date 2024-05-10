@@ -7,12 +7,15 @@
 #include <iostream>
 #include <fstream>
 #include <cstring>
+#include <sstream>
 
-Player::Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP) :
-Character(_name, _maxHealth, _health, _attack, _defense, _speed, _level, CharacterState::IDLE) {
-    currentXP = _currentXP;
-    leftOverXP = _leftOverXP;
-    nextLevelXP = _nextLevelXP;
+char playerName[40] = "Frieren, The Slayer";
+
+Player::Player() : Character(playerName, 100, 100, 999, 5, 10, 1, CharacterState::IDLE) {
+    currentXP = 0;
+    leftOverXP = 0;
+    nextLevelXP = 100;
+    unserialize("player_data.txt");
 }
 
 void Player::doAttack(Character *target) {
@@ -140,16 +143,10 @@ void Player::idle() {
 void Player::serialize(const char* filename) {
     std::ofstream file(filename); {
         if (file.is_open()) {
-            file << name << std::endl;
-            file << maxHealth << std::endl;
-            file << health << std::endl;
-            file << attack << std::endl;
-            file << defense << std::endl;
-            file << speed << std::endl;
-            file << level << std::endl;
-            file << currentXP << std::endl;
-            file << leftOverXP << std::endl;
-            file << nextLevelXP << std::endl;
+            file << name << "|" << maxHealth << "|" << health << "|" << attack << "|"
+                 << defense << "|" << speed << "|" << level << "|" << currentXP << "|"
+                 << leftOverXP << "|" << nextLevelXP << std::endl;
+            file.close();
         } else {
             std::cout << "Error opening file" << std::endl;
 
@@ -161,29 +158,47 @@ void Player::serialize(const char* filename) {
     void Player::unserialize(const char *filename) {
     std::ifstream file(filename);
     if (file.is_open()) {
-        file >> name;
-        file >> maxHealth;
-        file >> health;
-        file >> attack;
-        file >> defense;
-        file >> speed;
-        file >> level;
-        file >> currentXP;
-        file >> leftOverXP;
-        file >> nextLevelXP;
+            std::string line;
+            int _maxHealth, _health, _attack, _defense, _speed, _level, _currentXP, _leftOverXP, _nextLevelXP;
+        if (std::getline(file, line)) {
+            std::istringstream iss(line);
+            std::string token;
+            std::getline(iss, token, '|'); // Read name
+            size_t length = std::min(token.size(), sizeof(name) - 1); // Determinar la longitud del nombre
+            std::memcpy(name, token.c_str(), length); // Copiar el nombre al buffer
+            name[length] = '\0';
+            iss >> _maxHealth;
+            iss.ignore(); // Ignore the comma
+            iss >> _health;
+            iss.ignore();
+            iss >> _attack;
+            iss.ignore();
+            iss >> _defense;
+            iss.ignore();
+            iss >> _speed;
+            iss.ignore();
+            iss >> _level;
+            iss.ignore();
+            iss >> _currentXP;
+            iss.ignore();
+            iss >> _leftOverXP;
+            iss.ignore();
+            iss >> _nextLevelXP;
+
+            maxHealth = _maxHealth;
+            health = _health;
+            attack = _attack;
+            defense = _defense;
+            speed = _speed;
+            level = _level;
+            currentXP = _currentXP;
+            leftOverXP = _leftOverXP;
+            nextLevelXP = _nextLevelXP;
+        } else {
+        std::cerr << "Error: Empty file." << std::endl;
+        }
         file.close();
     } else {
-        std::cerr << "The file could not be opened. Predefined data will be used instead." << std::endl;
-        // Use predifined data
-        strncpy(name, "Frieren The Slayer", sizeof(name));
-        maxHealth = 100;
-        health = 1;
-        attack = 999;
-        defense = 4;
-        speed = 10;
-        level = 1;
-        currentXP = 0;
-        leftOverXP = 0;
-        nextLevelXP = 100;
+        std::cerr << "Error: Unable to open file." << std::endl;
     }
-}
+};

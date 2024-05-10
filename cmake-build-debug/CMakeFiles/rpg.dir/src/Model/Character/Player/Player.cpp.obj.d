@@ -151,4 +151,6 @@ CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj: \
  C:/msys64/mingw64/include/c++/13.1.0/iostream \
  C:/msys64/mingw64/include/c++/13.1.0/cstring \
  C:/msys64/mingw64/include/string.h \
- C:/msys64/mingw64/include/sec_api/string_s.h
+ C:/msys64/mingw64/include/sec_api/string_s.h \
+ C:/msys64/mingw64/include/c++/13.1.0/sstream \
+ C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc

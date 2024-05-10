@@ -473,6 +473,7 @@ CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj
  C:/msys64/mingw64/include/c++/13.1.0/bits/range_access.h
  C:/msys64/mingw64/include/c++/13.1.0/bits/refwrap.h
  C:/msys64/mingw64/include/c++/13.1.0/bits/requires_hosted.h
+ C:/msys64/mingw64/include/c++/13.1.0/bits/sstream.tcc
  C:/msys64/mingw64/include/c++/13.1.0/bits/std_abs.h
  C:/msys64/mingw64/include/c++/13.1.0/bits/stl_algobase.h
  C:/msys64/mingw64/include/c++/13.1.0/bits/stl_construct.h
@@ -515,6 +516,7 @@ CMakeFiles/rpg.dir/src/Model/Character/Player/Player.cpp.obj
  C:/msys64/mingw64/include/c++/13.1.0/new
  C:/msys64/mingw64/include/c++/13.1.0/ostream
  C:/msys64/mingw64/include/c++/13.1.0/pstl/pstl_config.h
+ C:/msys64/mingw64/include/c++/13.1.0/sstream
  C:/msys64/mingw64/include/c++/13.1.0/stdexcept
  C:/msys64/mingw64/include/c++/13.1.0/stdlib.h
  C:/msys64/mingw64/include/c++/13.1.0/streambuf

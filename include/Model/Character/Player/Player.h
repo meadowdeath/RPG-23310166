@@ -19,7 +19,7 @@ private:
 
 public:
     // Constructor to initialize the player
-    Player(char _name[40], int _maxHealth, int _health, int _attack, int _defense, int _speed, int _level, int _currentXP, int _leftOverXP, int _nextLevelXP);
+    Player();
 
     void doAttack(Character *target) override;
     void takeDamage(int damage) override;
